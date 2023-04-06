@@ -1,0 +1,16 @@
+@use "sass:map";
+
+@mixin produce($config) {
+    $checkbox: map.get($config, "component", "checkbox");
+
+    .crud-checkbox-wrapper {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        .crud-checkbox {
+            width: 1em;
+            height: 1em;
+        }
+    }
+}

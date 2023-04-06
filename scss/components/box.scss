@@ -1,0 +1,11 @@
+@use "sass:map";
+
+@mixin produce($config) {
+  $box: map.get($config, "component", "box");
+
+  .box {
+    display: flow-root;
+    background-color: map.get($box, "background-color");
+    color: map.get($box, "color");
+  }
+}

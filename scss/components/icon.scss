@@ -1,0 +1,7 @@
+@use "sass:map";
+
+@mixin produce($config) {
+    .crud-icon {
+        user-select: none;
+    }
+}

@@ -1,0 +1,35 @@
+@use "sass:map";
+
+@mixin produce($config) {
+    $checkbox: map.get($config, "component", "checkbox");
+
+    .crud-collapsible {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+
+        .crud-collapsible-header {
+            width: 100%;
+            background-color: antiquewhite;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 0.75em;
+            background-color: grey;
+            cursor: pointer;
+        }
+
+        .crud-collapsible-body {
+            width: 100%;
+            display: none; // Expected to be flex when not none.
+            justify-content: flex-start;
+            padding: 0.75em;
+            background-color: lightgrey;
+
+            &.show {
+                display: flex;
+            }
+        }
+    }
+}

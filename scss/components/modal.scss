@@ -1,0 +1,80 @@
+@use "sass:map";
+
+@mixin produce($config) {
+  $modal: map.get($config, "component", "modal");
+
+  #modal-host {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9000;
+    padding: 0.5em;
+
+    &:not(:empty) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  $instance-content-margin: 0;
+  .crud-modal-backdrop {
+    position: absolute;
+    // top: -$instance-content-margin;
+    // left: -$instance-content-margin;
+    // width: calc(100% + 2 * #{$instance-content-margin});
+    // height: calc(100% + 2 * #{$instance-content-margin});
+    width: 100%;
+    height: 100%;
+    background: rgba(92, 92, 92, 0.57);
+  }
+
+  .modals {
+    z-index: 1;
+  }
+
+  .crud-modal {
+    display: flex;
+    flex-direction: column;
+    color: map.get($modal, "color");
+    background-color: map.get($modal, "background-color");
+    font-size: map.get($modal, "font-size");
+    padding: map.get($modal, "padding");
+    z-index: 1;
+    margin: auto;
+    max-height: 88vh;
+
+    .crud-modal-header {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: map.get($modal, "header-padding");
+
+      .crud-modal-title {
+        margin: 0;
+        font-size: 1.3em;
+        font-weight: 500;
+      }
+    }
+
+    .crud-modal-body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: map.get($modal, "body-padding");
+      overflow-y: auto;
+    }
+
+    .crud-modal-footer {
+      display: flex;
+      justify-content: flex-end;
+      padding: map.get($modal, "footer-padding");
+    }
+  }
+}

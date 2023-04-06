@@ -1,0 +1,9 @@
+@use "sass:map";
+
+@mixin produce($config) {
+
+  *, ::after, ::before {
+    font-family: map.get($config, "typography", "font-family");
+  }
+
+}
