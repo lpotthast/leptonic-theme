@@ -24,11 +24,11 @@ pub fn generate(path: PathBuf) {
     file.write_all(
         r#"
         .leptonic-theme-light {
-            @import "./themes/light/light.scss";
+            @import "./themes/light/light";
         }
 
         .leptonic-theme-dark {
-            @import "./themes/dark/dark.scss";
+            @import "./themes/dark/dark";
         }
         "#
         .as_bytes(),

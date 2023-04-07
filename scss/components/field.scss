@@ -1,13 +1,13 @@
 @use "sass:map";
 
 @mixin produce($config) {
-    .crud-field {
+    .leptonic-field {
         display: block;
         width: 100%;
         margin-bottom: 1.5em;
     }
 
-    .crud-field:last-of-type {
+    .leptonic-field:last-of-type {
         margin-bottom: 0;
     }
 }

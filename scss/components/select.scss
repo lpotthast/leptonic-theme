@@ -6,7 +6,7 @@
     $input: map.get($config, "component", "input");
     $select: map.get($config, "component", "select");
     
-    .crud-select {
+    .leptonic-select {
         position: relative;
         border: none;
         cursor: pointer;

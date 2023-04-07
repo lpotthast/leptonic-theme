@@ -4,18 +4,18 @@
     $nob-width: 1.75em;
     $nob-transition: 0.4s;
 
-    .crud-toggle-wrapper {
+    .leptonic-toggle-wrapper {
         display: inline-flex;
         flex-direction: row;
         user-select: none;
 
-        .crud-icon {
+        .leptonic-icon {
             margin: 0;
-            font-size: 1.4em;
+            font-size: 1.2em;
             color: #303030;
         }
 
-        .crud-toggle {
+        .leptonic-toggle {
             display: inline-flex;
             width: 3.5em;
             height: $nob-width;
@@ -29,7 +29,7 @@
                 height: 100%;
                 background-color: #ccc;
                 transition: $nob-transition;
-                
+
                 .icon-positioner {
                     position: absolute;
                     display: inline-flex;

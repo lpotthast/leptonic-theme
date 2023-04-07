@@ -1,9 +1,7 @@
-//@use "../../../scss/scss-reset/reset";
-//@use "../../../scss/scss-grid/grid";
+@use "../general/reset";
+@use "../general/helper";
+@use "../general/grid";
 
-@use "../reset";
-
-@use "../components/helper";
 @use "../components/typography";
 @use "../components/alert";
 @use "../components/box";
@@ -25,6 +23,8 @@
 @use "../components/quicksearch";
 @use "../components/nav";
 @use "../components/modal";
+@use "../components/skeleton";
+@use "../components/stack";
 @use "../components/tooltip";
 @use "../components/validation";
 @use "../components/licensing";
@@ -39,7 +39,7 @@
   // TODO: Move outside as they are not depending on the given $config.
   @include reset.produce;
   @include helper.produce;
-  //@include grid.produce;
+  @include grid.produce;
 
   @include typography.produce($config);
   @include alert.produce($config);
@@ -63,6 +63,8 @@
   @include nav.produce($config);
   @include modal.produce($config);
   @include tooltip.produce($config);
+  @include skeleton.produce($config);
+  @include stack.produce($config);
   @include validation.produce($config);
   @include licensing.produce($config);
   @include input.produce($config);

@@ -4,7 +4,7 @@
   $button: map.get($config, "component", "button");
 
   // A button has no margin by default.
-  .crud-btn {
+  .leptonic-btn {
     position: relative;
     display: flex;
     flex-direction: row;
@@ -146,7 +146,7 @@
       cursor: default;
     }
 
-    .crud-icon {
+    .leptonic-icon {
       font-size: 0.9em;
       margin-right: 0.3em;
     }
@@ -171,7 +171,7 @@
       height: 100%;
       cursor: pointer;
 
-      .crud-icon {
+      .leptonic-icon {
         margin: 0;
       }
     }
@@ -193,7 +193,7 @@
     }
   }
 
-  .crud-btn-wrapper {
+  .leptonic-btn-wrapper {
     // Remove the gaps between the inline-block level buttons by using flexbox.
     display: inline-flex;
     flex-wrap: wrap;
@@ -204,7 +204,7 @@
     // Compensate outer button margins.
     margin: -0.125em;
 
-    .crud-btn {
+    .leptonic-btn {
       // Buttons should not stretch their height to fill the flexbox container.
       height: fit-content;
 
@@ -213,7 +213,7 @@
     }
   }
 
-  .crud-btn-group {
+  .leptonic-btn-group {
     // Remove the gaps between the inline-block level buttons by using flexbox.
     display: inline-flex;
     flex-wrap: nowrap;
@@ -224,7 +224,7 @@
     margin: 0;
 
     // Buttons in a group should be attached.
-    .crud-btn {
+    .leptonic-btn {
       margin: 0;
 
       &:first-child:not(:last-child) {

@@ -3,7 +3,7 @@
 @mixin produce($config) {
     $instance: map.get($config, "component", "instance");
 
-    .crud-instance {
+    .leptonic-instance {
         position: relative;
         display: block;
         transition: all 0.7s ease-in-out;
@@ -51,13 +51,13 @@
         }
     }
 
-    .crud-instance-header-wrapper {
+    .leptonic-instance-header-wrapper {
         width: 100%;
         display: flex;
         align-items: center;
         justify-content: space-between;
 
-        .crud-instance-header-actions {
+        .leptonic-instance-header-actions {
             display: flex;
             flex-direction: row;
             margin: -1em;

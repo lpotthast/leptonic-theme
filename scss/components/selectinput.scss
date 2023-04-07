@@ -9,16 +9,16 @@
   $select: map.get($config, "component", "select");
 
   // previously ::ng-deep
-  .crud-select {
+  .leptonic-select {
 
-    .crud-select-selected {
+    .leptonic-select-selected {
 
       @include input.input-field($input);
 
       color: map.get($select, "selected-color");
       background-color: map.get($select, "selected-background-color");
 
-      .crud-select-placeholder {
+      .leptonic-select-placeholder {
         color: map.get($select, "selected-placeholder-color");
       }
 
@@ -31,12 +31,12 @@
     }
 
   // previously ::ng-deep
-    .crud-select-dropdown {
+    .leptonic-select-dropdown {
 
       background-color: map.get($select, "dropdown-background-color");
       box-shadow: map.get($select, "dropdown-shadow");
 
-      .crud-select-search {
+      .leptonic-select-search {
         @include input.input-field($input);
 
         color: map.get($select, "search-color");
@@ -44,7 +44,7 @@
       }
 
       // previously ::ng-deep
-      .crud-select-menu {
+      .leptonic-select-menu {
 
         .no-choices {
           color: map.get($select, "no-items-color");
@@ -52,7 +52,7 @@
           padding: map.get($select, "item-padding");
         }
 
-        .crud-select-item {
+        .leptonic-select-item {
 
           color: map.get($select, "item-color");
           background-color: map.get($select, "item-background-color");

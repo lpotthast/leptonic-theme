@@ -69,8 +69,8 @@ $-input-padding: 0.5em 2em 0.5em 0;
 
 $components: (
     alert: (
-        vertical-padding: .8em,
-        horizontal-padding: 1.2em,
+        margin: 0.5em 0 0 0,
+        padding: .8em,
         primary-background-color: $-primary,
         primary-color: white,
         info-background-color: $-info,
@@ -163,12 +163,14 @@ $components: (
     checkbox: (),
     modal: (
         color: $-std-text-bright,
-        background-color: #343434,
+        background-color: #0f0f0f, //#343434,
         padding: 1.5em,
         font-size: 1em,
         header-padding: 1em,
         body-padding: 1.5em 1em,
-        footer-padding: 0.75em 1em
+        footer-padding: 0.75em 1em,
+        border-radius: 0.4em,
+        box-shadow: 10px 10px 22px -10px rgba(0,0,0,0.55)
     ),
     instance: (
         header-color: $-std-text-bright,

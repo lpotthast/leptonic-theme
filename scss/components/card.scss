@@ -3,7 +3,7 @@
 @mixin produce($config) {
     $card: map.get($config, "component", "card");
 
-    .crud-card {
+    .leptonic-card {
         padding: 1.75em;
         background-color: map.get($card, "background-color");
         border-radius: 0.25em;

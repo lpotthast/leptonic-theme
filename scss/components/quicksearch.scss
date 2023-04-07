@@ -4,7 +4,7 @@
 
     //$quicksearch: map.get($config, "component", "quicksearch");
     
-    .crud-quicksearch {
+    .leptonic-quicksearch {
         position: relative;
 
         .search-input {
@@ -30,7 +30,7 @@
                 cursor: pointer;
             }
 
-            .crud-btn {
+            .leptonic-btn {
                 border-top-left-radius: 0;
                 border-bottom-left-radius: 0;
                 background-color: #787878;
@@ -38,7 +38,7 @@
                 border-color: #565656;
                 cursor: pointer;
 
-                .crud-icon {
+                .leptonic-icon {
                     margin: 0;
                 }
             }

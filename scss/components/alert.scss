@@ -5,18 +5,13 @@
 
   .alert {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    //width: 100%;
+    flex-direction: row;
+    align-items: center;
     line-height: inherit;
-    margin: 0.5em;
-    padding: map.get($alert, "vertical-padding") map.get($alert, "horizontal-padding");
+    margin: map.get($alert, "margin");
+    padding: map.get($alert, "padding");
     border: none;
     border-radius: 0.5em;
-
-    &.centered {
-      align-items: center;
-    }
 
     &.info {
       color: map.get($alert, "info-color");
@@ -38,6 +33,7 @@
       background-color: map.get($alert, "danger-background-color");
     }
 
+    // TODO: Alerts are not dismissible. Toasts are!
     &.dismissible {
       .close {
         float: right;
@@ -65,10 +61,32 @@
       }
     }
 
-    .title {
-      font-size: 1.2em;
-      font-weight: bold;
-      margin-bottom: 0.3em;
+    .prepend {
+      margin-right: 0.7em;
+      margin-top: 0.1em;
+      align-self: flex-start;
+
+      .leptonic-icon {
+        font-size: 1.5em;
+      }
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      &.centered {
+        justify-content: center;
+        align-items: center;
+      }
+
+      .title {
+        font-weight: bold;
+        font-size: 1.1em;
+        line-height: 1.1em;
+        margin-bottom: 0.2em;
+      }
     }
   }
 }

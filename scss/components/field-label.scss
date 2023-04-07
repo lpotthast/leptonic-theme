@@ -3,7 +3,7 @@
 @mixin produce($config) {
   $input: map.get($config, "component", "field-label");
 
-  .crud-field-label {
+  .leptonic-field-label {
     display: inline-flex;
     color: map.get($input, "color");
     font-size: 0.9em;

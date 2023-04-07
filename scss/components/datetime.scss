@@ -3,7 +3,7 @@
 @mixin produce($config) {
     $datetime: map.get($config, "component", "datetime");
 
-    .crud-datetime {
+    .leptonic-datetime {
         display: flex;
         flex-direction: column;
 
