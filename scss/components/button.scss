@@ -40,7 +40,7 @@
     }
 
     // BTN-DEFAULT
-    &.type-default {
+    &.default {
       color: map.get($button, "btn-default-text-color");
       background-color: map.get($button, "btn-default-background-color");
 
@@ -57,7 +57,7 @@
     }
 
     // BTN-PRIMARY
-    &.type-primary {
+    &.primary {
       color: map.get($button, "btn-primary-text-color");
       background-color: map.get($button, "btn-primary-background-color");
 
@@ -75,7 +75,7 @@
     }
 
     // BTN-SUCCESS
-    &.type-success {
+    &.success {
       color: map.get($button, "btn-success-text-color");
       background-color: map.get($button, "btn-success-background-color");
 
@@ -93,7 +93,7 @@
     }
 
     // BTN-WARNING
-    &.type-warn {
+    &.warn {
       color: map.get($button, "btn-warning-text-color");
       background-color: map.get($button, "btn-warning-background-color");
 
@@ -111,7 +111,7 @@
     }
 
     // BTN-DANGER
-    &.type-danger {
+    &.danger {
       color: map.get($button, "btn-danger-text-color");
       background-color: map.get($button, "btn-danger-background-color");
 
