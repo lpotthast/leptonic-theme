@@ -8,8 +8,10 @@
 @use "../components/button";
 @use "../components/card";
 @use "../components/checkbox";
+@use "../components/collapse";
 @use "../components/collapsible";
 @use "../components/datetime";
+@use "../components/fade";
 @use "../components/icon";
 @use "../components/instance";
 @use "../components/geometry";
@@ -47,8 +49,10 @@
   @include button.produce($config);
   @include card.produce($config);
   @include checkbox.produce($config);
+  @include collapse.produce($config);
   @include collapsible.produce($config);
   @include datetime.produce($config);
+  @include fade.produce($config);
   @include icon.produce($config);
   @include instance.produce($config);
   @include geometry.produce($config);
