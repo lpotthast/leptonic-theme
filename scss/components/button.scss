@@ -6,7 +6,7 @@
   // A button has no margin by default.
   .leptonic-btn {
     position: relative;
-    display: flex;
+    display: inline-flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -22,7 +22,7 @@
     &.has-variations {
       padding-right: 1.5em;
     }
-    
+
     &.small {
       .name {
         padding: 0.35em 0.6em;
