@@ -3,7 +3,7 @@
 @mixin produce($config) {
   $modal: map.get($config, "component", "modal");
 
-  #modal-host {
+  leptonic-modal-host {
     display: none;
     position: absolute;
     top: 0;
@@ -22,7 +22,8 @@
   }
 
   $instance-content-margin: 0;
-  .leptonic-modal-backdrop {
+  leptonic-modal-backdrop {
+    display: block;
     position: absolute;
     // top: -$instance-content-margin;
     // left: -$instance-content-margin;
@@ -34,11 +35,12 @@
     backdrop-filter: blur(5px);
   }
 
-  .modals {
+  leptonic-modals {
+    display: block;
     z-index: 1;
   }
 
-  .leptonic-modal {
+  leptonic-modal {
     display: flex;
     flex-direction: column;
     color: map.get($modal, "color");
@@ -51,21 +53,21 @@
     border-radius: map.get($modal, "border-radius");
     box-shadow: map.get($modal, "box-shadow");
 
-    .leptonic-modal-header {
+    leptonic-modal-header {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       padding: map.get($modal, "header-padding");
 
-      .leptonic-modal-title {
+      leptonic-modal-title {
         margin: 0;
         font-size: 1.3em;
         font-weight: 500;
       }
     }
 
-    .leptonic-modal-body {
+    leptonic-modal-body {
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -74,7 +76,7 @@
       overflow-y: auto;
     }
 
-    .leptonic-modal-footer {
+    leptonic-modal-footer {
       display: flex;
       justify-content: flex-end;
       padding: map.get($modal, "footer-padding");

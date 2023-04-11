@@ -1,7 +1,7 @@
 @use "sass:map";
 
 @mixin produce($config) {
-    .leptonic-icon {
+    leptonic-icon {
         user-select: none;
     }
 }

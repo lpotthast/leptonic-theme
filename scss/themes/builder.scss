@@ -18,6 +18,7 @@
 @use "../components/slider";
 @use "../components/select";
 @use "../components/tabs";
+@use "../components/theme";
 @use "../components/toasts";
 @use "../components/toggle";
 @use "../components/pagination";
@@ -59,6 +60,7 @@
   @include slider.produce($config);
   @include select.produce($config);
   @include tabs.produce($config);
+  @include theme.produce($config);
   @include toasts.produce($config);
   @include toggle.produce($config);
   @include pagination.produce($config);

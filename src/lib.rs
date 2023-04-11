@@ -23,11 +23,11 @@ pub fn generate(path: PathBuf) {
 
     file.write_all(
         r#"
-        .leptonic-theme-light {
+        [data-theme="light"] {
             @import "./themes/light/light";
         }
 
-        .leptonic-theme-dark {
+        [data-theme="dark"] {
             @import "./themes/dark/dark";
         }
         "#

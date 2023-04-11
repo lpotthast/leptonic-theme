@@ -23,7 +23,7 @@
       padding-right: 1.5em;
     }
 
-    &.small {
+    &[data-size="small"] {
       .name {
         padding: 0.35em 0.6em;
       }
@@ -40,7 +40,7 @@
     }
 
     // BTN-DEFAULT
-    &.default {
+    &[data-color="default"] {
       color: map.get($button, "btn-default-text-color");
       background-color: map.get($button, "btn-default-background-color");
 
@@ -57,7 +57,7 @@
     }
 
     // BTN-PRIMARY
-    &.primary {
+    &[data-color="primary"] {
       color: map.get($button, "btn-primary-text-color");
       background-color: map.get($button, "btn-primary-background-color");
 
@@ -75,7 +75,7 @@
     }
 
     // BTN-SUCCESS
-    &.success {
+    &[data-color="success"] {
       color: map.get($button, "btn-success-text-color");
       background-color: map.get($button, "btn-success-background-color");
 
@@ -93,7 +93,7 @@
     }
 
     // BTN-WARNING
-    &.warn {
+    &[data-color="warn"] {
       color: map.get($button, "btn-warning-text-color");
       background-color: map.get($button, "btn-warning-background-color");
 
@@ -111,7 +111,7 @@
     }
 
     // BTN-DANGER
-    &.danger {
+    &[data-color="danger"] {
       color: map.get($button, "btn-danger-text-color");
       background-color: map.get($button, "btn-danger-background-color");
 
@@ -146,7 +146,14 @@
       cursor: default;
     }
 
-    .leptonic-icon {
+    &[data-variant="flat"] {
+      .name {
+        text-transform: uppercase;
+      }
+      background-color: transparent;
+    }
+
+    leptonic-icon {
       font-size: 0.9em;
       margin-right: 0.3em;
     }
@@ -171,7 +178,7 @@
       height: 100%;
       cursor: pointer;
 
-      .leptonic-icon {
+      leptonic-icon {
         margin: 0;
       }
     }

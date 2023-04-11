@@ -3,7 +3,7 @@
 @mixin produce($config) {
   $alert: map.get($config, "component", "alert");
 
-  .alert {
+  leptonic-alert {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -13,22 +13,22 @@
     border: none;
     border-radius: 0.5em;
 
-    &.info {
+    &[variant="info"] {
       color: map.get($alert, "info-color");
       background-color: map.get($alert, "info-background-color");
     }
 
-    &.success {
+    &[variant="success"] {
       color: map.get($alert, "success-color");
       background-color: map.get($alert, "success-background-color");
     }
 
-    &.warn {
+    &[variant="warn"] {
       color: map.get($alert, "warn-color");
       background-color: map.get($alert, "warn-background-color");
     }
 
-    &.danger {
+    &[variant="danger"] {
       color: map.get($alert, "danger-color");
       background-color: map.get($alert, "danger-background-color");
     }
@@ -66,7 +66,7 @@
       margin-top: 0.1em;
       align-self: flex-start;
 
-      .leptonic-icon {
+      leptonic-icon {
         font-size: 1.5em;
       }
     }

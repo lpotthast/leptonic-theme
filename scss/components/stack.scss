@@ -1,41 +1,22 @@
 @use "sass:map";
 
 @mixin produce($config) {
-    .leptonic-stack {
+    leptonic-stack {
+        // Default gap, when not otherwise defined through the HTML markup.
+        --gap: 0.5em;
+
         display: flex;
-        flex-direction: column;
         justify-content: center;
         align-items: center;
 
-        &.spacing-1 {
-            gap: 0.1em;
+        gap: var(--gap);
+
+        &[orientation="vertical"] {
+            flex-direction: column;
         }
-        &.spacing-2 {
-            gap: 0.2em;
-        }
-        &.spacing-3 {
-            gap: 0.3em;
-        }
-        &.spacing-4 {
-            gap: 0.4em;
-        }
-        &.spacing-5 {
-            gap: 0.5em;
-        }
-        &.spacing-6 {
-            gap: 0.6em;
-        }
-        &.spacing-7 {
-            gap: 0.7em;
-        }
-        &.spacing-8 {
-            gap: 0.8em;
-        }
-        &.spacing-9 {
-            gap: 0.9em;
-        }
-        &.spacing-10 {
-            gap: 1em;
+
+        &[orientation="horizontal"] {
+            flex-direction: row;
         }
     }
 }

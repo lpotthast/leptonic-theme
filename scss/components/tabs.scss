@@ -5,15 +5,16 @@
     $tab-selector: map.get($config, "component", "tab-selector");
     $tab: map.get($config, "component", "tab");
 
-    .leptonic-tabs {
+    leptonic-tabs {
+        display: block;
         margin-top: 1.5em;
         margin-bottom: 1.5em;
 
-        .leptonic-tab-selectors {
+        leptonic-tab-selectors {
             display: flex;
             padding: 0 1em;
 
-            .leptonic-tab-selector {
+            leptonic-tab-selector {
                 padding: 1.2em;
                 margin-right: 0.5em;
                 background-color: map.get($tab-selector, "background-color");
@@ -37,11 +38,16 @@
             }
         }
 
-        .leptonic-tab {
+        leptonic-tab {
+            display: block;
             padding: 1.75em;
             background-color: map.get($tab, "background-color");
             box-shadow: -2px 3px 15px -6px map.get($tab, "box-shadow-color");
             border-radius: 0.25em;
+
+            &[aria-hidden="true"] {
+                display: none;
+            }
         }
     }
 }

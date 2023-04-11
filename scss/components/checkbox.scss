@@ -3,12 +3,12 @@
 @mixin produce($config) {
     $checkbox: map.get($config, "component", "checkbox");
 
-    .leptonic-checkbox-wrapper {
+    leptonic-checkbox {
         display: flex;
         justify-content: flex-end;
         align-items: center;
 
-        .leptonic-checkbox {
+        input[type="checkbox"] {
             width: 1em;
             height: 1em;
         }
