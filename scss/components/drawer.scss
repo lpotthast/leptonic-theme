@@ -1,0 +1,16 @@
+@use "sass:map";
+
+@mixin produce($config) {
+
+    leptonic-drawer {
+        display: flex;
+        flex-direction: column;
+        width: 17em;
+        max-height: 100%;
+        margin-top: 2.75em;
+        background-color: #202020;
+        box-shadow: 1px 15px 15px 0px #0d0d0d;
+        z-index: 999;
+        transition: color 250ms ease-in-out,background-color 250ms ease-in-out,border 200ms ease-in-out;
+    }
+}

@@ -1,0 +1,16 @@
+@use "sass:map";
+
+@mixin produce($config) {
+    leptonic-code {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 1em;
+        border: 0.1em solid white;
+        border-radius: 0.25em;
+        background-color: #2f2f2f;
+        white-space: pre;
+        overflow: auto;
+    }
+}

@@ -3,7 +3,7 @@
 @mixin produce($config) {
   $box: map.get($config, "component", "box");
 
-  .leptonic-box {
+  leptonic-box {
     display: flow-root;
     background-color: map.get($box, "background-color");
     color: map.get($box, "color");

@@ -83,8 +83,13 @@ $components: (
         danger-background-color: $-danger,
         danger-color: white,
     ),
+    app-bar: (
+        background-color: #323232,
+        border-bottom: 2px solid #828282,
+        box-shadow: 1px 0px 15px 0px #9a9abc,
+    ),
     box: (
-        background-color: white,
+        background-color: #efebe8,
         color: $-std-text-dark,
     ),
     button: (

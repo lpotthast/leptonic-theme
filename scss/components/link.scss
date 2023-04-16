@@ -1,0 +1,17 @@
+@use "sass:map";
+
+@mixin produce($config) {
+    leptonic-link {
+        display: inline-flex;
+
+        a {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: auto;
+            color: inherit;
+            cursor: pointer;
+            font-size: 1em;
+        }
+    }
+}

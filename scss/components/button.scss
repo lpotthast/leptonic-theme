@@ -200,7 +200,7 @@
     }
   }
 
-  .leptonic-btn-wrapper {
+  leptonic-btn-wrapper {
     // Remove the gaps between the inline-block level buttons by using flexbox.
     display: inline-flex;
     flex-wrap: wrap;
@@ -220,7 +220,7 @@
     }
   }
 
-  .leptonic-btn-group {
+  leptonic-btn-group {
     // Remove the gaps between the inline-block level buttons by using flexbox.
     display: inline-flex;
     flex-wrap: nowrap;

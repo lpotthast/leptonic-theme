@@ -1,7 +1,7 @@
 @use "sass:map";
 
 @mixin produce($config) {
-    .leptonic-toasts {
+    leptonic-toasts {
         position: fixed;
         bottom: 2.5em;
         width: 100vw;
@@ -13,7 +13,7 @@
         z-index: 9999;
     }
 
-    .leptonic-toast {
+    leptonic-toast {
         position: relative;
         display: flex;
         flex-direction: column;
@@ -25,25 +25,25 @@
         color: white;
         pointer-events: all;
 
-        .leptonic-toast-heading {
+        leptonic-toast-heading {
             font-weight: 900;
             margin-bottom: 0.25em;
         }
 
-        &.info {
+        &[variant="info"] {
             background-color: #2290d4;
         }
 
-        &.success {
+        &[variant="success"] {
             background-color: #2aa547;
         }
 
-        &.warn {
+        &[variant="warn"] {
             background-color: #fbc744;
             color: black;
         }
 
-        &.error {
+        &[variant="error"] {
             background-color: #c62820;
         }
     }

@@ -4,16 +4,21 @@
 
 @use "../components/typography";
 @use "../components/alert";
+@use "../components/app-bar";
 @use "../components/box";
 @use "../components/button";
 @use "../components/card";
 @use "../components/checkbox";
+@use "../components/code";
 @use "../components/collapse";
 @use "../components/collapsible";
 @use "../components/datetime";
+@use "../components/drawer";
 @use "../components/fade";
 @use "../components/icon";
 @use "../components/instance";
+@use "../components/licensing";
+@use "../components/link";
 @use "../components/geometry";
 @use "../components/slider";
 @use "../components/select";
@@ -30,7 +35,6 @@
 @use "../components/stack";
 @use "../components/tooltip";
 @use "../components/validation";
-@use "../components/licensing";
 @use "../components/input";
 @use "../components/field-label";
 @use "../components/field";
@@ -46,16 +50,21 @@
 
   @include typography.produce($config);
   @include alert.produce($config);
+  @include app-bar.produce($config);
   @include box.produce($config);
   @include button.produce($config);
   @include card.produce($config);
   @include checkbox.produce($config);
+  @include code.produce($config);
   @include collapse.produce($config);
   @include collapsible.produce($config);
   @include datetime.produce($config);
+  @include drawer.produce($config);
   @include fade.produce($config);
   @include icon.produce($config);
   @include instance.produce($config);
+  @include licensing.produce($config);
+  @include link.produce($config);
   @include geometry.produce($config);
   @include slider.produce($config);
   @include select.produce($config);
@@ -72,7 +81,6 @@
   @include skeleton.produce($config);
   @include stack.produce($config);
   @include validation.produce($config);
-  @include licensing.produce($config);
   @include input.produce($config);
   @include field-label.produce($config);
   @include field.produce($config);

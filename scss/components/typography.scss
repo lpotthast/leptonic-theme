@@ -1,9 +1,32 @@
 @use "sass:map";
 
 @mixin produce($config) {
-
-  *, ::after, ::before {
+  *,
+  ::after,
+  ::before {
     font-family: map.get($config, "typography", "font-family");
   }
 
+  h1 {
+    margin: var(--margin);
+  }
+  h2 {
+    margin: var(--margin);
+  }
+  h3 {
+    margin: var(--margin);
+  }
+  h4 {
+    margin: var(--margin);
+  }
+  h5 {
+    margin: var(--margin);
+  }
+  h6 {
+    margin: var(--margin);
+  }
+
+  leptonic-code {
+    font-family: monospace;
+  }
 }
