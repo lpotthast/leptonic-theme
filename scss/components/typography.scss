@@ -7,23 +7,34 @@
     font-family: map.get($config, "typography", "font-family");
   }
 
-  h1 {
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
     margin: var(--margin);
+  }
+
+  h1 {
+    --margin: 0.67em 0;
+    font-size: 2em;
   }
   h2 {
-    margin: var(--margin);
+    --margin: 0.83em 0;
+    font-size: 1.5em;
   }
   h3 {
-    margin: var(--margin);
+    --margin: 1em 0;
+    font-size: 1.17em;
   }
   h4 {
-    margin: var(--margin);
+    --margin: 1.33em 0;
+    font-size: 1em;
   }
   h5 {
-    margin: var(--margin);
+    --margin: 2.33em 0;
+    font-size: 0.83em;
   }
   h6 {
-    margin: var(--margin);
+    --margin: 0.83em 0;
+    font-size: 0.67em;
   }
 
   leptonic-code {
