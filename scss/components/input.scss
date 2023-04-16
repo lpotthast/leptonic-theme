@@ -37,11 +37,11 @@
     line-height: inherit;
   }
 
-  .leptonic-input-field {
+  .leptonic-input {
     @include input-field($input);
   }
 
-  textarea.leptonic-input-field {
+  textarea.leptonic-input {
     height: auto;
     max-height: 25em;
   }
