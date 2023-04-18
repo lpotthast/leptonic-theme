@@ -6,14 +6,14 @@
   leptonic-app-bar {
     --height: 2.75em;
 
-    position: fixed;
+    position: absolute;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     background-color: map.get($bar, "background-color");
     border-bottom: map.get($bar, "border-bottom");
-    width: 100vw;
+    width: 100%;
     height: var(--height);
     z-index: 999;
     box-shadow: map.get($bar, "border-bottom");
