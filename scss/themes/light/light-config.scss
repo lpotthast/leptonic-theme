@@ -226,12 +226,20 @@ $components: (
     ),
     datetime: (
         font-size: 1em, // otherwise input font size
-        brand-color: #FF5711,
-        super-light-grey: $-grey-1,
-        light-grey: $-grey-2,
-        dark-grey: $-grey-5,
-        light-grey-text-color: $-grey-3,
-        white: $-grey-0,
+        weekday-name-color: #FF5711,
+        action-text-color: $-std-text-dark,
+        action-disabled-text-color: $-grey-2,
+        action-hover-background-color: $-grey-2,
+        current-month-border-color: $-grey-5,
+        day-text-color: $-std-text-dark,
+        day-from-different-month-text-color: $-grey-3,
+        day-hover-background-color: #FF5711,
+        current-day-background-color: #FF5711,
+        current-day-border-color: $-grey-5,
+        selected-day-text-color: $-grey-1,
+        selected-day-background-color: #FF5711,
+        disabled-day-text-color: $-grey-3,
+        disabled-day-hover-background-color: $-grey-3,
     )
 );
 

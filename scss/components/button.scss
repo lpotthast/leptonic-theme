@@ -128,18 +128,10 @@
       }
     }
 
-    // TODO: Rework?: Add to type stylings.
-    &.active,
-    &.active:active,
-    &.active:hover {
-      background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
-      color: rgb(250, 250, 250);
-    }
-
-    &.disabled,
-    &.disabled:hover,
-    &.disabled:focus,
-    &.disabled:active {
+    &[aria-disabled],
+    &[aria-disabled]:hover,
+    &[aria-disabled]:focus,
+    &[aria-disabled]:active {
       background-color: #e2e2e2;
       border-color: #e2e2e2;
       color: #9a9a9a;

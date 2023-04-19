@@ -3,9 +3,11 @@
 @mixin produce($config) {
     $datetime: map.get($config, "component", "datetime");
 
-    .leptonic-datetime {
+    leptonic-datetime {
         display: flex;
         flex-direction: column;
+        min-width: 21em;
+        max-width: 20em;
 
         .datetime-dropdown-menu-ref {
             position: relative;
@@ -24,8 +26,8 @@
             z-index: 9000;
         }
 
-        .date-selector {
-            .datetime-calendar-month {
+        leptonic-date-selector {
+            leptonic-calendar-month {
                 display: flex;
                 flex-direction: column;
             }
@@ -46,6 +48,7 @@
                     cursor: pointer;
                     margin-left: 0.5em;
                     font-size: 2.5em;
+                    border-color: map.get($datetime, "action-text-color");
                 }
 
                 .current-date {
@@ -55,9 +58,10 @@
                     border: 1px solid transparent;
                     border-radius: 0.5em;
                     padding: 0.5em;
+                    color: map.get($datetime, "action-text-color");
 
                     &:hover {
-                        background-color: map.get($datetime, "super-light-grey");
+                        background-color: map.get($datetime, "action-hover-background-color");
                     }
                 }
 
@@ -65,8 +69,8 @@
                     cursor: pointer;
                     margin-right: 0.5em;
                     font-size: 2.5em;
+                    border-color: map.get($datetime, "action-text-color");
                 }
-
             }
 
             .years,
@@ -91,15 +95,15 @@
                     font-weight: 200;
 
                     &:hover {
-                        background-color: map.get($datetime, "super-light-grey");
+                        background-color: map.get($datetime, "action-hover-background-color");
                     }
 
                     &.is-now {
-                        border: 0.1em solid map.get($datetime, "dark-grey");
+                        border: 0.1em solid map.get($datetime, "current-month-border-color");
                     }
 
                     &.disabled {
-                        color: map.get($datetime, "light-grey");
+                        color: map.get($datetime, "action-disabled-text-color");
                     }
                 }
             }
@@ -118,7 +122,7 @@
                 // border-bottom: 1px solid lightgrey;
                 user-select: none;
                 font-weight: 700;
-                color: map.get($datetime, "brand-color");
+                color: map.get($datetime, "weekday-name-color");
             }
 
             .week {
@@ -160,35 +164,35 @@
                     margin: 0.25em;
 
                     &.is-now {
-                        border: 0.1em solid map.get($datetime, "dark-grey");
+                        border: 0.1em solid map.get($datetime, "current-day-border-color");
                     }
                 }
 
                 &.not-in-month {
-                    color: map.get($datetime, "light-grey-text-color");
+                    color: map.get($datetime, "day-from-different-month-text-color");
                 }
 
                 &.selected {
                     .text {
-                        background-color: map.get($datetime, "brand-color");
-                        color: map.get($datetime, "white");
+                        background-color: map.get($datetime, "selected-day-background-color");
+                        color: map.get($datetime, "selected-day-text-color");
                     }
                 }
 
                 &.disabled {
                     .text {
-                        color: map.get($datetime, "super-light-grey");
+                        color: map.get($datetime, "disabled-day-text-color");
                     }
                 }
 
                 &:hover {
                     .text {
-                        background-color: map.get($datetime, "super-light-grey");
+                        background-color: map.get($datetime, "day-hover-background-color");
                     }
 
                     &.disabled {
                         .text {
-                            background-color: map.get($datetime, "light-grey");
+                            background-color: map.get($datetime, "disabled-day-hover-background-color");
                         }
                     }
                 }
@@ -217,11 +221,9 @@
                     margin: 2em;
                 }
 
-                .hour-selection {}
-
-                .minute-selection {}
-
-                .second-selection {}
+                //.hour-selection {}
+                //.minute-selection {}
+                //.second-selection {}
             }
 
             .arrow-up {
