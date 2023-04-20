@@ -6,6 +6,7 @@
     leptonic-datetime {
         display: flex;
         flex-direction: column;
+        font-size: 1em;
         min-width: 21em;
         max-width: 20em;
 
@@ -55,7 +56,7 @@
                     cursor: pointer;
                     font-weight: bold;
                     font-size: 1.3em;
-                    border: 1px solid transparent;
+                    border: 0.125em solid transparent;
                     border-radius: 0.5em;
                     padding: 0.5em;
                     color: map.get($datetime, "action-text-color");
@@ -88,7 +89,7 @@
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    border: 1px solid transparent;
+                    border: 0.125em solid transparent;
                     border-radius: 10em;
                     width: calc(100% / 3.25);
                     padding: 0.75em;
@@ -98,12 +99,30 @@
                         background-color: map.get($datetime, "action-hover-background-color");
                     }
 
-                    &.is-now {
-                        border: 0.1em solid map.get($datetime, "current-month-border-color");
-                    }
-
                     &.disabled {
                         color: map.get($datetime, "action-disabled-text-color");
+                    }
+                }
+
+                .year {
+                    &.is-staging {
+                        background-color: map.get($datetime, "staging-year-background-color");
+                        color: map.get($datetime, "staging-year-text-color");
+                    }
+
+                    &.is-now {
+                        border-color: map.get($datetime, "current-year-border-color");
+                    }
+                }
+
+                .month {
+                    &.is-staging {
+                        background-color: map.get($datetime, "staging-month-background-color");
+                        color: map.get($datetime, "staging-month-text-color");
+                    }
+
+                    &.is-now {
+                        border-color: map.get($datetime, "current-month-border-color");
                     }
                 }
             }
@@ -136,7 +155,6 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                // width: calc(100% / 7);
                 min-height: 3em;
                 user-select: none;
                 position: relative;
@@ -159,12 +177,15 @@
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    border: 0.1em solid transparent;
+                    border: 0.125em solid transparent;
                     border-radius: 10em;
                     margin: 0.25em;
 
-                    &.is-now {
-                        border: 0.1em solid map.get($datetime, "current-day-border-color");
+                }
+
+                &.is-now {
+                    .text {
+                        border-color: map.get($datetime, "current-day-border-color");
                     }
                 }
 
@@ -172,10 +193,10 @@
                     color: map.get($datetime, "day-from-different-month-text-color");
                 }
 
-                &.selected {
+                &.is-staging {
                     .text {
-                        background-color: map.get($datetime, "selected-day-background-color");
-                        color: map.get($datetime, "selected-day-text-color");
+                        background-color: map.get($datetime, "staging-day-background-color");
+                        color: map.get($datetime, "staging-day-text-color");
                     }
                 }
 
