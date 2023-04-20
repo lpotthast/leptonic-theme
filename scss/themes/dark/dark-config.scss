@@ -58,10 +58,6 @@ $-font-family: // Safari for OS X and iOS (San Francisco)
       // Basic web fallback
     "Helvetica Neue", Arial, sans-serif !default;
 
-$typography: (
-    font-family: $-font-family
-);
-
 $-btn-box-shadow-opacity: 0.3;
 $-input-bg-color: #202020;
 $-input-inverted-bg-color: #fafafa;
@@ -129,6 +125,29 @@ $components: (
         btn-danger-border-color: $-danger,
         btn-danger-border-color-hover: darken($-danger, $-darker-2),
         btn-danger-box-shadow-color: rgba($-danger, $-btn-box-shadow-opacity),
+    ),
+    datetime: (
+        font-size: 1em, // otherwise input font size
+        weekday-name-color: #e66956,
+        action-text-color: $-std-text-bright,
+        action-disabled-text-color: $-grey-2,
+        action-hover-background-color: $-grey-5,
+        staging-year-background-color: #e66956,
+        staging-year-text-color: $-std-text-bright,
+        current-year-border-color: $-grey-2,
+        staging-month-background-color: #e66956,
+        staging-month-text-color: $-std-text-bright,
+        current-month-border-color: $-grey-2,
+        day-text-color: $-std-text-bright,
+        day-from-different-month-text-color: $-grey-3,
+        day-hover-background-color: #e66956,
+        current-day-background-color: #e66956,
+        current-day-border-color: $-grey-2,
+        current-day-text-color: $-std-text-dark,
+        staging-day-text-color: $-std-text-bright,
+        staging-day-background-color: #e66956,
+        disabled-day-text-color: $-grey-3,
+        disabled-day-hover-background-color: $-grey-3,
     ),
     table-wrapper: (
         box-shadow-color: #101010,
@@ -223,34 +242,13 @@ $components: (
         instance-background-color: $-input-bg-color,
         border-color: $-grey-4
     ),
-    datetime: (
-        font-size: 1em, // otherwise input font size
-        weekday-name-color: #e66956,
-        action-text-color: $-std-text-bright,
-        action-disabled-text-color: $-grey-2,
-        action-hover-background-color: $-grey-5,
-        staging-year-background-color: #e66956,
-        staging-year-text-color: $-std-text-bright,
-        current-year-border-color: $-grey-2,
-        staging-month-background-color: #e66956,
-        staging-month-text-color: $-std-text-bright,
-        current-month-border-color: $-grey-2,
-        day-text-color: $-std-text-bright,
-        day-from-different-month-text-color: $-grey-3,
-        day-hover-background-color: #e66956,
-        current-day-background-color: #e66956,
-        current-day-border-color: $-grey-2,
-        current-day-text-color: $-std-text-dark,
-        staging-day-text-color: $-std-text-bright,
-        staging-day-background-color: #e66956,
-        disabled-day-text-color: $-grey-3,
-        disabled-day-hover-background-color: $-grey-3,
+    typography: (
+        font-family: $-font-family
     )
 );
 
 $config: (
     color: $colors,
     color-shift: $color-shifts,
-    typography: $typography,
     component: $components,
 );

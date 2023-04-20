@@ -1,13 +1,20 @@
 @use "sass:map";
 
 @mixin produce($config) {
+  $typography: map.get($config, "component", "typography");
+
   *,
   ::after,
   ::before {
-    font-family: map.get($config, "typography", "font-family");
+    font-family: map.get($typography, "font-family");
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-weight: bold;
     margin: var(--margin);
   }
@@ -39,5 +46,18 @@
 
   leptonic-code {
     font-family: monospace;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 0.9em;
+    margin: 1.1111em 0;
+    padding: 1em;
+    border: none;
+    border-radius: 0.25em;
+    background-color: #2f2f2f;
+    color: #fff5e2;
+    white-space: pre;
+    overflow: auto;
   }
 }
