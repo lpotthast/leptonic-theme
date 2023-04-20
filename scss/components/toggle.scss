@@ -2,7 +2,7 @@
 
 @mixin produce($config) {
     $nob-width: 1.75em;
-    $nob-transition: 0.4s;
+    $nob-transition: 0.3s;
 
     .leptonic-toggle-wrapper {
         display: inline-flex;

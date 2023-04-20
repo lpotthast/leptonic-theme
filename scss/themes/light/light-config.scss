@@ -81,7 +81,7 @@ $components: (
     ),
     app-bar: (
         background-color: #323232,
-        border-bottom: 2px solid #828282,
+        border-bottom: none, // 2px solid #828282,
         box-shadow: 1px 0px 15px 0px #9a9abc,
     ),
     box: (
@@ -134,18 +134,19 @@ $components: (
         action-disabled-text-color: $-grey-2,
         action-hover-background-color: $-grey-2,
         staging-year-background-color: #e66956,
-        staging-year-text-color: $-grey-1,
+        staging-year-text-color: $-std-text-bright,
         current-year-border-color: $-grey-5,
         staging-month-background-color: #e66956,
-        staging-month-text-color: $-grey-1,
+        staging-month-text-color: $-std-text-bright,
         current-month-border-color: $-grey-5,
         day-text-color: $-std-text-dark,
         day-from-different-month-text-color: $-grey-3,
+        day-hover-text-color: $-std-text-bright,
         day-hover-background-color: #e66956,
         current-day-background-color: #e66956,
         current-day-border-color: $-grey-5,
         current-day-text-color: $-std-text-dark,
-        staging-day-text-color: $-grey-1,
+        staging-day-text-color: $-std-text-bright,
         staging-day-background-color: #e66956,
         disabled-day-text-color: $-grey-3,
         disabled-day-hover-background-color: $-grey-3,
@@ -244,7 +245,9 @@ $components: (
         border-color: #c9c9c9
     ),
     typography: (
-        font-family: $-font-family
+        font-family: $-font-family,
+        code-background-color: #2d2f34,
+        code-color: #fff5e2
     )
 );
 

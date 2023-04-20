@@ -208,6 +208,7 @@
 
                 &:hover {
                     .text {
+                        color: map.get($datetime, "day-hover-text-color");
                         background-color: map.get($datetime, "day-hover-background-color");
                     }
 

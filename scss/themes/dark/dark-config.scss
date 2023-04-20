@@ -80,11 +80,11 @@ $components: (
     ),
     app-bar: (
         background-color: #323232,
-        border-bottom: 2px solid #828282,
+        border-bottom: none, // 2px solid #828282,
         box-shadow: 1px 0px 15px 0px #1f1f1f,
     ),
     box: (
-        background-color: #0f0f0f,
+        background-color: #1e1c1c, //#0f0f0f,
         color: $-std-text-bright,
     ),
     button: (
@@ -140,6 +140,7 @@ $components: (
         current-month-border-color: $-grey-2,
         day-text-color: $-std-text-bright,
         day-from-different-month-text-color: $-grey-3,
+        day-hover-text-color: $-std-text-bright,
         day-hover-background-color: #e66956,
         current-day-background-color: #e66956,
         current-day-border-color: $-grey-2,
@@ -243,7 +244,9 @@ $components: (
         border-color: $-grey-4
     ),
     typography: (
-        font-family: $-font-family
+        font-family: $-font-family,
+        code-background-color: #2d2f34,
+        code-color: #fff5e2
     )
 );
 
