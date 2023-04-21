@@ -4,6 +4,10 @@
     leptonic-link {
         display: inline-flex;
 
+        &.anchor::before {
+            content: "\00a0";
+        }
+
         a {
             display: inline-flex;
             justify-content: center;
