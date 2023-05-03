@@ -5,13 +5,13 @@
 
     $input: map.get($config, "component", "input");
     $select: map.get($config, "component", "select");
-    
-    .leptonic-select {
+
+    leptonic-select {
         position: relative;
         border: none;
         cursor: pointer;
 
-        .selected {
+        leptonic-select-selected {
             display: flex;
             flex-direction: row;
             justify-content: flex-start;
@@ -33,23 +33,25 @@
             border-radius: map.get($input, "border-radius");
 
             &:focus {
-              outline: none;
-              border-bottom: map.get($input, "focus-highlight-background-color");
+                outline: none;
+                border-bottom: map.get($input, "focus-highlight-background-color");
             }
         }
 
-        .options {
+        leptonic-select-options {
             position: absolute;
             display: none;
             flex-direction: column;
             /* max-width: 30em; */
             width: 100%;
-            background-color: white;
-            border: 1px solid;
+            background-color: map.get($input, "dropdown-background-color");
+            box-shadow: map.get($input, "dropdown-shadow"); // 6px 8px 20px -7px #0d0d0d
+            border: 0.1em solid #242424;
+            border-top: none;
             max-height: 8em;
             overflow-y: scroll;
             z-index: 999;
-            
+
             &.shown {
                 display: flex;
             }
