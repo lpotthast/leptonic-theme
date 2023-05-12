@@ -64,5 +64,11 @@
     color: map.get($typography, "code-color");
     white-space: pre;
     overflow: auto;
+
+    &[inline="true"] {
+      display: inline-flex;
+      padding: 0.5em;
+      margin: 0;
+    }
   }
 }
