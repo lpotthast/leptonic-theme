@@ -20,32 +20,32 @@
   }
 
   h1 {
-    --margin: 0 0 0.67em 0;
+    --margin: 0.67em 0 0.67em 0;
     font-size: 2em;
   }
   h2 {
-    --margin: 0 0 0.83em 0;
+    --margin: 0.83em 0 0.83em 0;
     font-size: 1.5em;
   }
   h3 {
-    --margin: 0 0 1em 0;
+    --margin: 1em 0 1em 0;
     font-size: 1.17em;
   }
   h4 {
-    --margin: 0 0 1.33em 0;
+    --margin: 1.33em 0 1.33em 0;
     font-size: 1em;
   }
   h5 {
-    --margin: 0 0 1.67em 0;
+    --margin: 1.67em 0 1.67em 0;
     font-size: 0.83em;
   }
   h6 {
-    --margin: 0 0 2.33em 0;
+    --margin: 2.33em 0 2.33em 0;
     font-size: 0.67em;
   }
 
   p {
-    --margin: 0 0 1em 0;
+    --margin: 1em 0 1em 0;
     margin: var(--margin);
   }
 
