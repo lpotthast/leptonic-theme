@@ -59,7 +59,7 @@ $-font-family: // Safari for OS X and iOS (San Francisco)
     "Helvetica Neue", Arial, sans-serif !default;
 
 $-btn-box-shadow-opacity: 0.3;
-$-input-bg-color: #202020;
+$-input-bg-color: #0f0f0f; // 202020
 $-input-inverted-bg-color: #fafafa;
 $-input-padding: 0.5em 2em 0.5em 0.5em;
 
@@ -215,6 +215,9 @@ $components: (
         border-bottom: 1px solid rgb(255 255 255 / 15%),
         border-radius: 0,
         min-height: 2.5em
+    ),
+    link: (
+        color: #e66956,
     ),
     select: (
         selected-color: $-std-text-bright,

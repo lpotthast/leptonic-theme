@@ -1,8 +1,11 @@
 @use "sass:map";
 
 @mixin produce($config) {
+    $button: map.get($config, "component", "link");
+
     leptonic-link {
         display: inline-flex;
+        color: map.get($button, "color");
 
         &.anchor::before {
             content: "\00a0";

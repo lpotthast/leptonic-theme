@@ -44,9 +44,9 @@
             flex-direction: column;
             /* max-width: 30em; */
             width: 100%;
-            background-color: map.get($input, "dropdown-background-color");
-            box-shadow: map.get($input, "dropdown-shadow"); // 6px 8px 20px -7px #0d0d0d
-            border: 0.1em solid #242424;
+            background-color: map.get($select, "dropdown-background-color");
+            box-shadow: map.get($select, "dropdown-shadow"); // 6px 8px 20px -7px #0d0d0d
+            border: none; //0.1em solid #242424;
             border-top: none;
             max-height: 8em;
             overflow-y: scroll;
