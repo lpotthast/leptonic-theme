@@ -61,7 +61,7 @@
                 user-select: none;
 
                 &:hover {
-                    background-color: lightgrey;
+                    background-color: map.get($select, "item-hover-background-color");
                 }
             }
         }

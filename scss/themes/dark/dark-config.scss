@@ -12,6 +12,7 @@ $-std-text-dark: #1d1d1d;
 $-default-color: #6c6c6c;
 
 $-primary: #0275d8;
+$-secondary: #494949;
 $-info: #0275d8;
 $-success: #43b543;
 $-warn: rgb(251, 140, 0);
@@ -125,6 +126,32 @@ $components: (
         btn-danger-border-color: $-danger,
         btn-danger-border-color-hover: darken($-danger, $-darker-2),
         btn-danger-box-shadow-color: rgba($-danger, $-btn-box-shadow-opacity),
+    ),
+    chip: (
+        chip-primary-text-color: $-std-text-bright,
+        chip-primary-text-color-hover: $-std-text-bright,
+        chip-primary-background-color: $-primary,
+        chip-primary-background-color-hover: darken($-primary, $-darker-1),
+        chip-secondary-text-color: $-std-text-bright,
+        chip-secondary-text-color-hover: $-std-text-bright,
+        chip-secondary-background-color: $-secondary,
+        chip-secondary-background-color-hover: darken($-secondary, $-darker-1),
+        chip-success-text-color: $-std-text-bright,
+        chip-success-text-color-hover: $-std-text-bright,
+        chip-success-background-color: $-success,
+        chip-success-background-color-hover: darken($-success, $-darker-1),
+        chip-info-text-color: $-std-text-bright,
+        chip-info-text-color-hover: $-std-text-bright,
+        chip-info-background-color: $-info,
+        chip-info-background-color-hover: darken($-info, $-darker-1),
+        chip-warn-text-color: $-std-text-bright,
+        chip-warn-text-color-hover: $-std-text-bright,
+        chip-warn-background-color: $-warn,
+        chip-warn-background-color-hover: darken($-warn, $-darker-1),
+        chip-danger-text-color: $-std-text-bright,
+        chip-danger-text-color-hover: $-std-text-bright,
+        chip-danger-background-color: $-danger,
+        chip-danger-background-color-hover: darken($-danger, $-darker-1),
     ),
     datetime: (
         font-size: 1em, // otherwise input font size

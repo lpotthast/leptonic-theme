@@ -9,6 +9,7 @@
 @use "../components/button";
 @use "../components/card";
 @use "../components/checkbox";
+@use "../components/chip";
 @use "../components/collapse";
 @use "../components/collapsible";
 @use "../components/datetime";
@@ -54,6 +55,7 @@
   @include button.produce($config);
   @include card.produce($config);
   @include checkbox.produce($config);
+  @include chip.produce($config);
   @include collapse.produce($config);
   @include collapsible.produce($config);
   @include datetime.produce($config);
