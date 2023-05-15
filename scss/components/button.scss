@@ -1,23 +1,30 @@
 @use "sass:map";
 
 @mixin produce($config) {
-  $button: map.get($config, "component", "button");
-
-  // A button has no margin by default.
   .leptonic-btn {
     position: relative;
     display: inline-flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    border: 1px solid transparent;
+    border: 0.1em solid transparent;
     font-size: 1em;
     font-weight: 400;
     line-height: 1.25;
-    border-radius: 0.25em;
+    border-radius: var(--button-border-radius);
     transition: all 0.1s ease-in-out;
     user-select: none;
     cursor: pointer;
+
+    &::before {
+      content: "";
+      height: calc(99% + var(--button-border-size) * 2);
+      width: calc(99% + var(--button-border-size) * 2);
+      position: absolute;
+      border-radius: var(--button-border-radius);
+      transition: all 0.1s ease-in-out;
+      opacity: var(--button-box-shadow-opacity);
+    }
 
     &.has-variations {
       padding-right: 1.5em;
@@ -31,101 +38,133 @@
       border-radius: 0.2em;
     }
 
-    &:active {
-      box-shadow: 0 0 0 0.2em rgba(map.get($button, "box-shadow-color"), map.get($button, "box-shadow-opacity"));
-    }
-
     &:focus {
       outline: none;
     }
 
-    // BTN-DEFAULT
-    &[color="default"] {
-      color: map.get($button, "btn-default-text-color");
-      background-color: map.get($button, "btn-default-background-color");
+    // BTN-PRIMARY
+    &[color="primary"] {
+      color: var(--button-primary-text-color);
+      background-color: var(--button-primary-background-color);
+      border-color: var(--button-primary-border-color);
 
       &:hover,
       &:active,
       &:focus {
-        background-color: map.get($button, "btn-default-background-color-hover");
+        color: var(--button-primary-text-color-hover);
+        background-color: var(--button-primary-background-color-hover);
+        border-color: var(--button-primary-border-color-hover);
       }
 
-      &:active,
-      &:focus {
-        box-shadow: 0 0 0 0.2em map.get($button, "btn-default-box-shadow-color");
+      &:active {
+        &::before {
+          box-shadow: 0 0 0 0.2em var(--button-primary-box-shadow-color);
+        }
       }
     }
 
-    // BTN-PRIMARY
-    &[color="primary"] {
-      color: map.get($button, "btn-primary-text-color");
-      background-color: map.get($button, "btn-primary-background-color");
-      border-color: map.get($button, "btn-primary-background-color");
+    // BTN-DEFAULT
+    &[color="secondary"] {
+      color: var(--button-secondary-text-color);
+      background-color: var(--button-secondary-background-color);
+      border-color: var(--button-secondary-border-color);
 
       &:hover,
       &:active,
       &:focus {
-        background-color: map.get($button, "btn-primary-background-color-hover");
-        border-color: map.get($button, "btn-primary-border-color-hover");
+        color: var(--button-secondary-text-color-hover);
+        background-color: var(--button-secondary-background-color-hover);
+        border-color: var(--button-secondary-border-color-hover);
       }
 
-      &:active,
-      &:focus {
-        box-shadow: 0 0 0 0.2em map.get($button, "btn-primary-box-shadow-color");
+      &:active {
+        &::before {
+          box-shadow: 0 0 0 0.2em var(--button-secondary-box-shadow-color);
+        }
       }
     }
 
     // BTN-SUCCESS
-    &[data-color="success"] {
-      color: map.get($button, "btn-success-text-color");
-      background-color: map.get($button, "btn-success-background-color");
+    &[color="success"] {
+      color: var(--button-success-text-color);
+      background-color: var(--button-success-background-color);
+      border-color: var(--button-success-border-color);
 
       &:hover,
       &:active,
       &:focus {
-        background-color: map.get($button, "btn-success-background-color-hover");
-        border-color: map.get($button, "btn-success-border-color-hover");
+        color: var(--button-success-text-color-hover);
+        background-color: var(--button-success-background-color-hover);
+        border-color: var(--button-success-border-color-hover);
       }
 
+      &:active {
+        &::before {
+          box-shadow: 0 0 0 0.2em var(--button-success-box-shadow-color);
+        }
+      }
+    }
+
+    // BTN-INFO
+    &[color="info"] {
+      color: var(--button-info-text-color);
+      background-color: var(--button-info-background-color);
+      border-color: var(--button-info-border-color);
+
+      &:hover,
       &:active,
       &:focus {
-        box-shadow: 0 0 0 0.2em map.get($button, "btn-success-box-shadow-color");
+        color: var(--button-info-text-color-hover);
+        background-color: var(--button-info-background-color-hover);
+        border-color: var(--button-info-border-color-hover);
+      }
+
+      &:active {
+        &::before {
+          box-shadow: 0 0 0 0.2em var(--button-info-box-shadow-color);
+        }
       }
     }
 
     // BTN-WARNING
     &[color="warn"] {
-      color: map.get($button, "btn-warning-text-color");
-      background-color: map.get($button, "btn-warning-background-color");
+      color: var(--button-warning-text-color);
+      background-color: var(--button-warning-background-color);
+      border-color: var(--button-warning-border-color);
 
       &:hover,
       &:active,
       &:focus {
-        background-color: map.get($button, "btn-warning-background-color-hover");
-        border-color: map.get($button, "btn-warning-border-color-hover");
+        color: var(--button-warning-text-color-hover);
+        background-color: var(--button-warning-background-color-hover);
+        border-color: var(--button-warning-border-color-hover);
       }
 
-      &:active,
-      &:focus {
-        box-shadow: 0 0 0 0.2em map.get($button, "btn-warning-box-shadow-color");
+      &:active {
+        &::before {
+          box-shadow: 0 0 0 0.2em var(--button-warning-box-shadow-color);
+        }
       }
     }
 
     // BTN-DANGER
     &[color="danger"] {
-      color: map.get($button, "btn-danger-text-color");
-      background-color: map.get($button, "btn-danger-background-color");
+      color: var(--button-danger-text-color);
+      background-color: var(--button-danger-background-color);
+      border-color: var(--button-danger-border-color);
 
       &:hover,
       &:active,
       &:focus {
-        background-color: map.get($button, "btn-danger-background-color-hover");
-        border-color: map.get($button, "btn-danger-border-color-hover");
+        color: var(--button-danger-text-color-hover);
+        background-color: var(--button-danger-background-color-hover);
+        border-color: var(--button-danger-border-color-hover);
       }
 
-      &:active,
-      &:focus {
-        box-shadow: 0 0 0 0.2em map.get($button, "btn-danger-box-shadow-color");
+      &:active {
+        &::before {
+          box-shadow: 0 0 0 0.2em var(--button-danger-box-shadow-color);
+        }
       }
     }
 

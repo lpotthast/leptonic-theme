@@ -1,8 +1,6 @@
 @use "sass:map";
 
 @mixin produce($config) {
-  $modal: map.get($config, "component", "modal");
-
   leptonic-modal-host {
     display: none;
     position: absolute;
@@ -21,14 +19,9 @@
     }
   }
 
-  $instance-content-margin: 0;
   leptonic-modal-backdrop {
     display: block;
     position: absolute;
-    // top: -$instance-content-margin;
-    // left: -$instance-content-margin;
-    // width: calc(100% + 2 * #{$instance-content-margin});
-    // height: calc(100% + 2 * #{$instance-content-margin});
     width: 100%;
     height: 100%;
     background: rgba(92, 92, 92, 0.5);
@@ -43,22 +36,22 @@
   leptonic-modal {
     display: flex;
     flex-direction: column;
-    color: map.get($modal, "color");
-    background-color: map.get($modal, "background-color");
-    font-size: map.get($modal, "font-size");
-    padding: map.get($modal, "padding");
+    color: var(--modal-color);
+    background-color: var(--modal-background-color);
+    font-size: var(--modal-font-size);
+    padding: var(--modal-padding);
     z-index: 1;
     margin: auto;
     max-height: 88vh;
-    border-radius: map.get($modal, "border-radius");
-    box-shadow: map.get($modal, "box-shadow");
+    border-radius: var(--modal-border-radius);
+    box-shadow: var(--modal-box-shadow);
 
     leptonic-modal-header {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      padding: map.get($modal, "header-padding");
+      padding: var(--modal-header-padding);
 
       leptonic-modal-title {
         margin: 0;
@@ -72,14 +65,14 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      padding: map.get($modal, "body-padding");
+      padding: var(--modal-body-padding);
       overflow-y: auto;
     }
 
     leptonic-modal-footer {
       display: flex;
       justify-content: flex-end;
-      padding: map.get($modal, "footer-padding");
+      padding: var(--modal-footer-padding);
     }
   }
 }

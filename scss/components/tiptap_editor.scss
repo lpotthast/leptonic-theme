@@ -1,8 +1,6 @@
 @use "sass:map";
 
 @mixin produce($config) {
-    $editor: map.get($config, "component", "tiptap-editor");
-
     .tiptap-editor {
         display: flex;
         flex-direction: column;
@@ -17,7 +15,7 @@
             flex-direction: row;
             justify-content: flex-start;
             flex-wrap: wrap;
-            border: 1px solid map.get($editor, "border-color");
+            border: 1px solid var(--tiptap-editor-border-color);
             gap: 0.3em;
             padding: 1em;
         }
@@ -27,25 +25,26 @@
             justify-content: flex-start;
             align-items: center;
             font-weight: 300;
-            color: map.get($editor, "btn-color");
-            background-color: map.get($editor, "btn-background-color");
+            color: var(--tiptap-editor-btn-color);
+            background-color: var(--tiptap-editor-btn-background-color);
             border-radius: 0.25em;
             padding: 0.25em;
             user-select: none;
             cursor: pointer;
 
-            &.active, &:hover {
-                color: map.get($editor, "active-btn-color");
-                background-color: map.get($editor, "active-btn-background-color");
+            &.active,
+            &:hover {
+                color: var(--tiptap-editor-active-btn-color);
+                background-color: var(--tiptap-editor-active-btn-background-color);
             }
         }
 
         .tiptap-instance {
-            border: 1px solid map.get($editor, "border-color");
-            color: map.get($editor, "instance-color");
-            background-color: map.get($editor, "instance-background-color");
+            border: 1px solid var(--tiptap-editor-border-color);
+            color: var(--tiptap-editor-instance-color);
+            background-color: var(--tiptap-editor-instance-background-color);
             padding: 0 1em;
-            
+
             img {
                 width: auto;
                 height: auto;

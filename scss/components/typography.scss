@@ -1,12 +1,10 @@
 @use "sass:map";
 
 @mixin produce($config) {
-  $typography: map.get($config, "component", "typography");
-
   *,
   ::after,
   ::before {
-    font-family: map.get($typography, "font-family");
+    font-family: var(--typography-font-family);
   }
 
   h1,
@@ -60,8 +58,8 @@
     padding: 1em;
     border: none;
     border-radius: 0.25em;
-    background-color: map.get($typography, "code-background-color");
-    color: map.get($typography, "code-color");
+    background-color: var(--typography-code-background-color);
+    color: var(--typography-code-color);
     white-space: pre;
     overflow: auto;
 

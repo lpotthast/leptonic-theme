@@ -5,12 +5,12 @@
 
 $-brand-color: #e66956;
 
-$-grey-0: #F8F8F8;
-$-grey-1: #ECECEB;
-$-grey-2: #DBDBDA;
-$-grey-3: #8D9CA3;
-$-grey-4: #5D6E77;
-$-grey-5: #2E2F33;
+$-grey-0: #f8f8f8;
+$-grey-1: #ececeb;
+$-grey-2: #dbdbda;
+$-grey-3: #8d9ca3;
+$-grey-4: #5d6e77;
+$-grey-5: #2e2f33;
 $-grey-6: #212121;
 $-std-text-bright: #f0f0f0;
 $-std-text-dark: #1d1d1d;
@@ -53,16 +53,17 @@ $color-shifts: (
 
 $-font-family: // Safari for OS X and iOS (San Francisco)
     -apple-system,
-      // Chrome >= 56 for OS X (San Francisco), Windows, Linux and Android
+    // Chrome >= 56 for OS X (San Francisco), Windows, Linux and Android
     system-ui,
-      // Chrome < 56 for OS X (San Francisco)
+    // Chrome < 56 for OS X (San Francisco)
     BlinkMacSystemFont,
-      // Windows
+    // Windows
     "Segoe UI",
-      // Android
+    // Android
     "Roboto",
-      // Basic web fallback
-    "Helvetica Neue", Arial, sans-serif !default;
+    // Basic web fallback
+    "Helvetica Neue",
+    Arial, sans-serif !default;
 
 $-btn-box-shadow-opacity: 0.3;
 $-input-bg-color: white;
@@ -70,183 +71,15 @@ $-input-inverted-bg-color: $-std-text-dark;
 $-input-padding: 0.5em 2em 0.5em 0.5em;
 
 $components: (
-    alert: (
-        margin: 0.5em 0 0 0,
-        padding: .8em,
-        primary-background-color: $-primary,
-        primary-color: white,
-        info-background-color: $-info,
-        info-color: white,
-        success-background-color: $-success,
-        success-color: white,
-        warn-background-color: $-warn,
-        warn-color: white,
-        danger-background-color: $-danger,
-        danger-color: white,
-    ),
-    app-bar: (
-        background-color: #323232,
-        border-bottom: none, // 2px solid #828282,
-        box-shadow: 1px 0px 15px 0px #9a9abc,
-    ),
-    box: (
-        background-color: #efebe8,
-        color: $-std-text-dark,
-    ),
-    button: (
-        box-shadow-color: lighten($-primary, 10%),
-        box-shadow-opacity: $-btn-box-shadow-opacity,
-        btn-default-text-color: $-std-text-dark,
-        btn-default-text-color-hover: $-std-text-dark,
-        btn-default-background-color: $-default-color,
-        btn-default-background-color-hover: darken($-default-color, $-darker-1),
-        btn-default-border-color: $-default-color,
-        btn-default-border-color-hover: $-default-color,
-        btn-default-box-shadow-color: rgba($-default-color, $-btn-box-shadow-opacity),
-        btn-primary-text-color: $-std-text-bright,
-        btn-primary-text-color-hover: $-std-text-bright,
-        btn-primary-background-color: $-primary,
-        btn-primary-background-color-hover: darken($-primary, $-darker-1),
-        btn-primary-border-color: $-primary,
-        btn-primary-border-color-hover: darken($-primary, $-darker-2),
-        btn-primary-box-shadow-color: rgba($-primary, $-btn-box-shadow-opacity),
-        btn-success-text-color: $-std-text-bright,
-        btn-success-text-color-hover: $-std-text-bright,
-        btn-success-background-color: $-success,
-        btn-success-background-color-hover: darken($-success, $-darker-1),
-        btn-success-border-color: $-success,
-        btn-success-border-color-hover: darken($-success, $-darker-2),
-        btn-success-box-shadow-color: rgba($-success, $-btn-box-shadow-opacity),
-        btn-warning-text-color: $-std-text-bright,
-        btn-warning-text-color-hover: $-std-text-bright,
-        btn-warning-background-color: $-warn,
-        btn-warning-background-color-hover: darken($-warn, $-darker-1),
-        btn-warning-border-color: $-warn,
-        btn-warning-border-color-hover: darken($-warn, $-darker-2),
-        btn-warning-box-shadow-color: rgba($-warn, $-btn-box-shadow-opacity),
-        btn-danger-text-color: $-std-text-bright,
-        btn-danger-text-color-hover: $-std-text-bright,
-        btn-danger-background-color: $-danger,
-        btn-danger-background-color-hover: darken($-danger, $-darker-1),
-        btn-danger-border-color: $-danger,
-        btn-danger-border-color-hover: darken($-danger, $-darker-2),
-        btn-danger-box-shadow-color: rgba($-danger, $-btn-box-shadow-opacity),
-    ),
-    chip: (
-        chip-primary-text-color: $-std-text-bright,
-        chip-primary-text-color-hover: $-std-text-bright,
-        chip-primary-background-color: $-primary,
-        chip-primary-background-color-hover: darken($-primary, $-darker-1),
-        chip-secondary-text-color: $-std-text-bright,
-        chip-secondary-text-color-hover: $-std-text-bright,
-        chip-secondary-background-color: $-secondary,
-        chip-secondary-background-color-hover: darken($-secondary, $-darker-1),
-        chip-success-text-color: $-std-text-bright,
-        chip-success-text-color-hover: $-std-text-bright,
-        chip-success-background-color: $-success,
-        chip-success-background-color-hover: darken($-success, $-darker-1),
-        chip-info-text-color: $-std-text-bright,
-        chip-info-text-color-hover: $-std-text-bright,
-        chip-info-background-color: $-info,
-        chip-info-background-color-hover: darken($-info, $-darker-1),
-        chip-warn-text-color: $-std-text-bright,
-        chip-warn-text-color-hover: $-std-text-bright,
-        chip-warn-background-color: $-warn,
-        chip-warn-background-color-hover: darken($-warn, $-darker-1),
-        chip-danger-text-color: $-std-text-bright,
-        chip-danger-text-color-hover: $-std-text-bright,
-        chip-danger-background-color: $-danger,
-        chip-danger-background-color-hover: darken($-danger, $-darker-1),
-    ),
-    datetime: (
-        font-size: 1em, // otherwise input font size
-        weekday-name-color: #e66956,
-        action-text-color: $-std-text-dark,
-        action-disabled-text-color: $-grey-2,
-        action-hover-background-color: $-grey-2,
-        staging-year-background-color: #e66956,
-        staging-year-text-color: $-std-text-bright,
-        current-year-border-color: $-grey-5,
-        staging-month-background-color: #e66956,
-        staging-month-text-color: $-std-text-bright,
-        current-month-border-color: $-grey-5,
-        day-text-color: $-std-text-dark,
-        day-from-different-month-text-color: $-grey-3,
-        day-hover-text-color: $-std-text-bright,
-        day-hover-background-color: #e66956,
-        current-day-background-color: #e66956,
-        current-day-border-color: $-grey-5,
-        current-day-text-color: $-std-text-dark,
-        staging-day-text-color: $-std-text-bright,
-        staging-day-background-color: #e66956,
-        disabled-day-text-color: $-grey-3,
-        disabled-day-hover-background-color: $-grey-3,
-    ),
-    table-wrapper: (
-        box-shadow-color: #666666,
-    ),
-    table: (
-        color: $-std-text-dark,
-        background-color: white,
-        background-color-on-hover: lighten($-std-text-dark, 80%),
-        background-color-of-striped-rows: #ffffeb,
-        header-background-color: #fafafa,
-        border-color: lighten($-std-text-dark, 80%),
-        cell-box-shadow-on-hover: 2px 2px 10px -3px rgb(50, 50, 50),
-        column-background-if-ordered: #dddddd,
-        header-cell-padding: 0.75em 1em,
-        body-cell-padding: 0.75em 1em
-    ),
-    table-row: (
-        border-bottom-color: lightgrey,
-    ),
-    tabs: (
-    ),
-    tab-selector: (
-        background-color: #d3d3d3,
-        text-color: black,
-        active-background-color: white,
-        active-border-color: #e3e3e3,
-        active-box-shadow-color: #4a4a4a,
-    ),
-    tab: (
-        background-color: white,
-        box-shadow-color: #666666,
-    ),
-    card: (
-        background-color: white,
-        box-shadow-color: #666666,
-    ),
-    checkbox: (),
-    modal: (
-        color: $-std-text-dark,
-        background-color: white,
-        padding: 1.5em,
-        font-size: 1em,
-        header-padding: 1em,
-        body-padding: 1.5em 1em,
-        footer-padding: 0.75em 1em,
-        border-radius: 0.4em,
-        box-shadow: 10px 10px 22px -10px rgba(0,0,0,0.55)
-    ),
-    instance: (
-        header-color: $-std-text-dark,
-        header-bg-color: #eaeaea,
-        //body-bg-color: white,
-        body-bg-color: transparent,
-        collapsible-body-content-margin: 0.75em
-    ),
-    field-label: (
-        color: #767676
-    ),
     input: (
         padding: $-input-padding,
         color: $-std-text-dark,
         background-color: $-input-bg-color,
-        border: none, // Reset any border previously defined!
-        border-bottom: 1px solid rgba(0, 0, 0, .15),
+        border: none,
+        // Reset any border previously defined!
+        border-bottom: 1px solid rgba(0, 0, 0, 0.15),
         border-radius: 0,
-        min-height: 2.5em
+        min-height: 2.5em,
     ),
     select: (
         selected-color: $-std-text-dark,
@@ -265,22 +98,8 @@ $components: (
         item-background-color: $-input-bg-color,
         item-padding: $-input-padding,
         item-hover-background-color: darken($-input-bg-color, 15%),
-        item-selected-background-color: darken($-input-bg-color, 30%)
+        item-selected-background-color: darken($-input-bg-color, 30%),
     ),
-    tiptap-editor: (
-        btn-color: $-std-text-dark,
-        btn-background-color: #dfdfdf,
-        active-btn-color: white,
-        active-btn-background-color: $-std-text-dark,
-        instance-color: $-std-text-dark,
-        instance-background-color: $-input-bg-color,
-        border-color: #c9c9c9
-    ),
-    typography: (
-        font-family: $-font-family,
-        code-background-color: #2d2f34,
-        code-color: #fff5e2
-    )
 );
 
 $config: (
@@ -290,8 +109,239 @@ $config: (
 );
 
 [theme="light"] {
-    --brand-color: #{$-brand-color};
+    // Color basics
+    --brand-color: #e66956;
+    --primary-color: var(--brand-color);
+    --secondary-color: #6c6c6c;
+    --info-color: #0275d8;
+    --success-color: #43b543;
+    --warn-color: rgb(251, 140, 0);
+    --danger-color: #d9534f;
+
+    --grey-0: #f8f8f8;
+    --grey-1: #ececeb;
+    --grey-2: #dbdbda;
+    --grey-3: #8d9ca3;
+    --grey-4: #5d6e77;
+    --grey-5: #2e2f33;
+    --grey-6: #212121;
+    --std-text-bright: #f0f0f0;
+    --std-text-dark: #1d1d1d;
+    --default-color: #e2e2e2;
+
+    // Brightness modifiers
+    --brighter-3: 10%;
+    --brighter-2: 7%;
+    --brighter-1: 5%;
+    --darker-1: 5%;
+    --darker-2: 7%;
+    --darker-3: 10%;
+
+    // Font
+    --font-family: // Safari for OS X and iOS (San Francisco)
+        -apple-system,
+        // Chrome >= 56 for OS X (San Francisco), Windows, Linux and Android
+        system-ui,
+        // Chrome < 56 for OS X (San Francisco)
+        BlinkMacSystemFont,
+        // Windows
+        "Segoe UI",
+        // Android
+        "Roboto",
+        // Basic web fallback
+        "Helvetica Neue",
+        Arial, sans-serif;
+
+    // Alert
+    --alert-margin: 0.5em 0 0 0;
+    --alert-padding: 0.8em;
+    --alert-primary-background-color: var(--primary-color);
+    --alert-primary-color: white;
+    --alert-info-background-color: var(--info-color);
+    --alert-info-color: white;
+    --alert-success-background-color: var(--success-color);
+    --alert-success-color: white;
+    --alert-warn-background-color: var(--warn-color);
+    --alert-warn-color: white;
+    --alert-danger-background-color: var(--danger-color);
+    --alert-danger-color: white;
+
+    // App bar
+    --app-bar-height: 2.75em;
+    --app-bar-background-color: #323232;
+    --app-bar-border-bottom: none; // 2px solid #828282,
+    --app-bar-box-shadow: 1px 0px 15px 0px #9a9abc;
+
+    // Box
+    --box-background-color: #efebe8;
+    --box-color: var(--std-text-dark);
+
+    // Button
+    --button-border-size: 0.1em;
+    --button-border-radius: 0.25em;
+    --button-box-shadow-opacity: 0.3;
+
+    --button-primary-text-color: var(--std-text-bright);
+    --button-primary-text-color-hover: var(--std-text-bright);
+    --button-primary-background-color: var(--primary-color);
+    --button-primary-background-color-hover: color-mix(in srgb, black var(--darker-2), var(--primary-color));
+    --button-primary-border-color: var(--primary-color);
+    --button-primary-border-color-hover: color-mix(in srgb, black var(--darker-2), var(--primary-color));
+    --button-primary-box-shadow-color: var(--primary-color);
+
+    --button-secondary-text-color: var(--std-text-dark);
+    --button-secondary-text-color-hover: var(--std-text-dark);
+    --button-secondary-background-color: var(--default-color);
+    --button-secondary-background-color-hover: color-mix(in srgb, black var(--darker-2), var(--default-color));
+    --button-secondary-border-color: var(--default-color);
+    --button-secondary-border-color-hover: color-mix(in srgb, black var(--darker-2), var(--default-color));
+    --button-secondary-box-shadow-color: var(--default-color);
+
+    --button-success-text-color: var(--std-text-bright);
+    --button-success-text-color-hover: var(--std-text-bright);
+    --button-success-background-color: var(--success-color);
+    --button-success-background-color-hover: color-mix(in srgb, black var(--darker-2), var(--success-color));
+    --button-success-border-color: var(--success-color);
+    --button-success-border-color-hover: color-mix(in srgb, black var(--darker-2), var(--success-color));
+    --button-success-box-shadow-color: var(--success-color);
+
+    --button-info-text-color: var(--std-text-bright);
+    --button-info-text-color-hover: var(--std-text-bright);
+    --button-info-background-color: var(--info-color);
+    --button-info-background-color-hover: color-mix(in srgb, black var(--darker-2), var(--info-color));
+    --button-info-border-color: var(--info-color);
+    --button-info-border-color-hover: color-mix(in srgb, black var(--darker-2), var(--info-color));
+    --button-info-box-shadow-color: var(--info-color);
+
+    --button-warning-text-color: var(--std-text-bright);
+    --button-warning-text-color-hover: var(--std-text-bright);
+    --button-warning-background-color: var(--warn-color);
+    --button-warning-background-color-hover: color-mix(in srgb, black var(--darker-2), var(--warn-color));
+    --button-warning-border-color: var(--warn-color);
+    --button-warning-border-color-hover: color-mix(in srgb, black var(--darker-2), var(--warn-color));
+    --button-warning-box-shadow-color: var(--warn-color);
+
+    --button-danger-text-color: var(--std-text-bright);
+    --button-danger-text-color-hover: var(--std-text-bright);
+    --button-danger-background-color: var(--danger-color);
+    --button-danger-background-color-hover: color-mix(in srgb, black var(--darker-2), var(--danger-color));
+    --button-danger-border-color: var(--danger-color);
+    --button-danger-border-color-hover: color-mix(in srgb, black var(--darker-2), var(--danger-color));
+    --button-danger-box-shadow-color: var(--danger-color);
+
+    // Card
+    --card-background-color: white;
+    --card-box-shadow-color: #666666;
+
+    // Chip
+    --chip-primary-text-color: var(--std-text-bright);
+    --chip-primary-text-color-hover: var(--std-text-bright);
+    --chip-primary-background-color: var(--primary-color);
+    --chip-primary-background-color-hover: color-mix(in srgb, black var(--darker-2), var(--primary-color));
+    --chip-secondary-text-color: var(--std-text-bright);
+    --chip-secondary-text-color-hover: var(--std-text-bright);
+    --chip-secondary-background-color: var(--secondary-color);
+    --chip-secondary-background-color-hover: color-mix(in srgb, black var(--darker-2), var(--secondary-color));
+    --chip-success-text-color: var(--std-text-bright);
+    --chip-success-text-color-hover: var(--std-text-bright);
+    --chip-success-background-color: var(--success-color);
+    --chip-success-background-color-hover: color-mix(in srgb, black var(--darker-2), var(--success-color));
+    --chip-info-text-color: var(--std-text-bright);
+    --chip-info-text-color-hover: var(--std-text-bright);
+    --chip-info-background-color: var(--info-color);
+    --chip-info-background-color-hover: color-mix(in srgb, black var(--darker-2), var(--info-color));
+    --chip-warn-text-color: var(--std-text-bright);
+    --chip-warn-text-color-hover: var(--std-text-bright);
+    --chip-warn-background-color: var(--warn-color);
+    --chip-warn-background-color-hover: color-mix(in srgb, black var(--darker-2), var(--warn-color));
+    --chip-danger-text-color: var(--std-text-bright);
+    --chip-danger-text-color-hover: var(--std-text-bright);
+    --chip-danger-background-color: var(--danger-color);
+    --chip-danger-background-color-hover: color-mix(in srgb, black var(--darker-2), var(--danger-color));
+
+    // Datetime
+    --datetime-font-size: 1em;
+    --datetime-weekday-name-color: var(--primary-color);
+    --datetime-action-text-color: var(--std-text-dark);
+    --datetime-action-disabled-text-color: var(--grey-2);
+    --datetime-action-hover-background-color: var(--grey-2);
+    --datetime-staging-year-background-color: var(--primary-color);
+    --datetime-staging-year-text-color: var(--std-text-bright);
+    --datetime-current-year-border-color: var(--grey-5);
+    --datetime-staging-month-background-color: var(--primary-color);
+    --datetime-staging-month-text-color: var(--std-text-bright);
+    --datetime-current-month-border-color: var(--grey-5);
+    --datetime-day-text-color: var(--std-text-dark);
+    --datetime-day-from-different-month-text-color: var(--grey-3);
+    --datetime-day-hover-text-color: var(--std-text-bright);
+    --datetime-day-hover-background-color: var(--primary-color);
+    --datetime-current-day-background-color: var(--primary-color);
+    --datetime-current-day-border-color: var(--grey-5);
+    --datetime-current-day-text-color: var(--std-text-dark);
+    --datetime-staging-day-text-color: var(--std-text-bright);
+    --datetime-staging-day-background-color: var(--primary-color);
+    --datetime-disabled-day-text-color: var(--grey-3);
+    --datetime-disabled-day-hover-background-color: var(--grey-3);
+
+    // Field label
+    --field-label-color: #767676;
+
+    // Link
     --link-color: var(--brand-color);
+
+    // Modal
+    --modal-color: var(--std-text-dark);
+    --modal-background-color: white;
+    --modal-padding: 1.5em;
+    --modal-font-size: 1em;
+    --modal-header-padding: 1em;
+    --modal-body-padding: 1.5em 1em;
+    --modal-footer-padding: 0.75em 1em;
+    --modal-border-radius: 0.4em;
+    --modal-box-shadow: 10px 10px 22px -10px rgba(0, 0, 0, 0.55);
+
+    // Tab selector
+    --tab-selector-background-color: #d3d3d3;
+    --tab-selector-text-color: black;
+    --tab-selector-active-background-color: white;
+    --tab-selector-active-border-color: #e3e3e3;
+    --tab-selector-active-box-shadow-color: #4a4a4a;
+
+    // Tab
+    --tab-background-color: white;
+    --tab-box-shadow-color: #666666;
+
+    // Table wrapper
+    --table-wrapper-box-shadow-color: #666666;
+
+    // Table
+    --table-color: var(--std-text-dark);
+    --table-background-color: white;
+    --table-background-color-on-hover: color-mix(in srgb, white 80%, var(--std-text-dark));
+    --table-background-color-of-striped-rows: #ffffeb;
+    --table-header-background-color: #fafafa;
+    --table-border-color: color-mix(in srgb, white 80%, var(--std-text-dark));
+    --table-cell-box-shadow-on-hover: 2px 2px 10px -3px rgb(50, 50, 50);
+    --table-column-background-if-ordered: #dddddd;
+    --table-header-cell-padding: 0.75em 1em;
+    --table-body-cell-padding: 0.75em 1em;
+
+    // Table row
+    --table-row-border-bottom-color: lightgrey;
+
+    // Tiptap editor
+    --tiptap-editor-btn-color: var(--std-text-dark);
+    --tiptap-editor-btn-background-color: #dfdfdf;
+    --tiptap-editor-active-btn-color: white;
+    --tiptap-editor-active-btn-background-color: var(--std-text-dark);
+    --tiptap-editor-instance-color: var(--std-text-dark);
+    --tiptap-editor-instance-background-color: var(--input-bg-color);
+    --tiptap-editor-border-color: #c9c9c9;
+
+    // Typography
+    --typography-font-family: var(--font-family); // TODO: Inline?
+    --typography-code-background-color: #2d2f34;
+    --typography-code-color: #fff5e2;
 
     @include builder.build-theme($config);
 }

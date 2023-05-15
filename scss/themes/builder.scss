@@ -16,8 +16,6 @@
 @use "../components/drawer";
 @use "../components/fade";
 @use "../components/icon";
-@use "../components/instance";
-@use "../components/licensing";
 @use "../components/link";
 @use "../components/geometry";
 @use "../components/slider";
@@ -62,8 +60,6 @@
   @include drawer.produce($config);
   @include fade.produce($config);
   @include icon.produce($config);
-  @include instance.produce($config);
-  @include licensing.produce($config);
   @include link.produce($config);
   @include geometry.produce($config);
   @include slider.produce($config);

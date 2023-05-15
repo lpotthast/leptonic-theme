@@ -1,8 +1,6 @@
 @use "sass:map";
 
 @mixin produce($config) {
-    $checkbox: map.get($config, "component", "checkbox");
-
     leptonic-checkbox {
         display: flex;
         justify-content: flex-end;

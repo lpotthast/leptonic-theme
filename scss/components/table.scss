@@ -1,28 +1,13 @@
 @use "sass:map";
 
 @mixin produce($config) {
-  $table-wrapper: map.get($config, "component", "table-wrapper");
-  $table: map.get($config, "component", "table");
-  $table-row: map.get($config, "component", "table-row");
-
-  $-color: map.get($table, "color");
-  $-background-color: map.get($table, "background-color");
-  $-background-color-on-hover: map.get($table, "background-color-on-hover");
-  $-background-color-of-striped-rows: map.get($table, "background-color-of-striped-rows");
-  $-header-background-color: map.get($table, "header-background-color");
-  $-border-color: map.get($table, "border-color");
-  $-cell-box-shadow-on-hover: map.get($table, "cell-box-shadow-on-hover");
-  $-column-background-if-ordered: map.get($table, "column-background-if-ordered");
-  $-header-cell-padding: map.get($table, "header-cell-padding");
-  $-body-cell-padding: map.get($table, "body-cell-padding");
-
   .leptonic-table-wrapper {
     display: block;
     width: 100%;
     overflow-x: auto;
     transition: height 0.5s ease;
     border-radius: 0.5em;
-    box-shadow: -2px 3px 15px -6px map.get($table-wrapper, "box-shadow-color");
+    box-shadow: -2px 3px 15px -6px var(--table-wrapper-box-shadow-color);
   }
 
   .leptonic-table {
@@ -30,11 +15,11 @@
     width: 100%;
     font-size: 1em;
     line-height: 1.35;
-    color: $-color;
-    background-color: $-background-color;
+    color: var(--table-color);
+    background-color: var(--table-background-color);
 
     thead {
-      background-color: $-header-background-color;
+      background-color: var(--table-header-background-color);
 
       th.min-width {
         width: 1%;
@@ -53,12 +38,12 @@
     th,
     td {
       &.leptonic-column-ordered {
-        background-color: $-column-background-if-ordered;
+        background-color: var(--table-column-background-if-ordered);
       }
     }
 
     th {
-      padding: $-header-cell-padding;
+      padding: var(--table-header-cell-padding);
 
       &.leptonic-column-header {
         vertical-align: top;
@@ -66,7 +51,7 @@
       }
 
       &:hover {
-        .leptonic-order-by-sign  {
+        .leptonic-order-by-sign {
           visibility: visible;
         }
       }
@@ -80,7 +65,7 @@
     }
 
     td {
-      padding: $-body-cell-padding;
+      padding: var(--table-body-cell-padding);
       text-align: start;
       vertical-align: top;
 
@@ -104,7 +89,7 @@
 
     tbody {
       tr {
-        border-bottom: 1px solid map.get($table-row, "border-bottom-color"); // 1px instead of 0.005em so that all lines are equally thick.
+        border-bottom: 1px solid var(--table-row-border-bottom-color); // 1px instead of 0.005em so that all lines are equally thick.
 
         &.interactable {
           cursor: pointer;
@@ -125,7 +110,7 @@
       td,
       th {
         //border: 0.05em solid;
-        border-color: $-border-color;
+        border-color: var(--table-border-color);
       }
 
       th {
@@ -135,13 +120,13 @@
 
     &.leptonic-table-striped {
       tr:nth-child(2n) {
-        background-color: $-background-color-of-striped-rows;
+        background-color: var(--table-background-color-of-striped-rows);
       }
     }
 
     &.leptonic-table-hoverable {
       tbody tr:hover {
-        background-color: $-background-color-on-hover;
+        background-color: var(--table-background-color-on-hover);
       }
     }
   }
@@ -150,7 +135,7 @@
     cursor: pointer;
 
     &:hover {
-      background-color: $-column-background-if-ordered;
+      background-color: var(--table-column-background-if-ordered);
     }
   }
 
@@ -203,5 +188,4 @@
       cursor: pointer;
     }
   }
-
 }

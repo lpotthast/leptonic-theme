@@ -1,8 +1,6 @@
 @use "sass:map";
 
 @mixin produce($config) {
-    $chip: map.get($config, "component", "chip");
-
     leptonic-chip {
         display: inline-flex;
         justify-content: center;
@@ -13,51 +11,51 @@
         border-radius: 1em;
 
         &[color="primary"] {
-            color: map.get($chip, "chip-primary-text-color");
-            background-color: map.get($chip, "chip-primary-background-color");
+            color: var(--chip-primary-text-color);
+            background-color: var(--chip-primary-background-color);
             &:hover {
-                color: map.get($chip, "chip-primary-text-color-hover");
-                background-color: map.get($chip, "chip-primary-background-color-hover");
+                color: var(--chip-primary-text-color-hover);
+                background-color: var(--chip-primary-background-color-hover);
             }
         }
         &[color="secondary"] {
-            color: map.get($chip, "chip-secondary-text-color");
-            background-color: map.get($chip, "chip-secondary-background-color");
+            color: var(--chip-secondary-text-color);
+            background-color: var(--chip-secondary-background-color);
             &:hover {
-                color: map.get($chip, "chip-secondary-text-color-hover");
-                background-color: map.get($chip, "chip-secondary-background-color-hover");
+                color: var(--chip-secondary-text-color-hover);
+                background-color: var(--chip-secondary-background-color-hover);
             }
         }
         &[color="success"] {
-            color: map.get($chip, "chip-success-text-color");
-            background-color: map.get($chip, "chip-success-background-color");
+            color: var(--chip-success-text-color);
+            background-color: var(--chip-success-background-color);
             &:hover {
-                color: map.get($chip, "chip-success-text-color-hover");
-                background-color: map.get($chip, "chip-success-background-color-hover");
+                color: var(--chip-success-text-color-hover);
+                background-color: var(--chip-success-background-color-hover);
             }
         }
         &[color="info"] {
-            color: map.get($chip, "chip-info-text-color");
-            background-color: map.get($chip, "chip-info-background-color");
+            color: var(--chip-info-text-color);
+            background-color: var(--chip-info-background-color);
             &:hover {
-                color: map.get($chip, "chip-info-text-color-hover");
-                background-color: map.get($chip, "chip-info-background-color-hover");
+                color: var(--chip-info-text-color-hover);
+                background-color: var(--chip-info-background-color-hover);
             }
         }
         &[color="warn"] {
-            color: map.get($chip, "chip-warn-text-color");
-            background-color: map.get($chip, "chip-warn-background-color");
+            color: var(--chip-warn-text-color);
+            background-color: var(--chip-warn-background-color);
             &:hover {
-                color: map.get($chip, "chip-warn-text-color-hover");
-                background-color: map.get($chip, "chip-warn-background-color-hover");
+                color: var(--chip-warn-text-color-hover);
+                background-color: var(--chip-warn-background-color-hover);
             }
         }
         &[color="danger"] {
-            color: map.get($chip, "chip-danger-text-color");
-            background-color: map.get($chip, "chip-danger-background-color");
+            color: var(--chip-danger-text-color);
+            background-color: var(--chip-danger-background-color);
             &:hover {
-                color: map.get($chip, "chip-danger-text-color-hover");
-                background-color: map.get($chip, "chip-danger-background-color-hover");
+                color: var(--chip-danger-text-color-hover);
+                background-color: var(--chip-danger-background-color-hover);
             }
         }
     }

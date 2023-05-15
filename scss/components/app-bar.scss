@@ -1,21 +1,17 @@
 @use "sass:map";
 
 @mixin produce($config) {
-  $bar: map.get($config, "component", "app-bar");
-
   leptonic-app-bar {
-    --height: 2.75em;
-
     position: absolute;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    background-color: map.get($bar, "background-color");
-    border-bottom: map.get($bar, "border-bottom");
+    background-color: var(--app-bar-background-color);
+    border-bottom: var(--app-bar-border-bottom);
     width: 100%;
-    height: var(--height);
+    height: var(--app-bar-height);
     z-index: 999;
-    box-shadow: map.get($bar, "border-bottom");
+    box-shadow: var(--app-bar-border-bottom);
   }
 }

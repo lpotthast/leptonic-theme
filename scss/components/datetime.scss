@@ -1,8 +1,6 @@
 @use "sass:map";
 
 @mixin produce($config) {
-    $datetime: map.get($config, "component", "datetime");
-
     leptonic-datetime {
         display: flex;
         flex-direction: column;
@@ -23,7 +21,7 @@
             max-width: 28em;
             min-width: 22em;
             left: 2px;
-            font-size: map.get($datetime, "font-size");
+            font-size: var(--datetime-font-size);
             z-index: 9000;
         }
 
@@ -49,7 +47,7 @@
                     cursor: pointer;
                     margin-left: 0.5em;
                     font-size: 2.5em;
-                    border-color: map.get($datetime, "action-text-color");
+                    border-color: var(--datetime-action-text-color);
                 }
 
                 .current-date {
@@ -59,10 +57,10 @@
                     border: 0.125em solid transparent;
                     border-radius: 0.5em;
                     padding: 0.5em;
-                    color: map.get($datetime, "action-text-color");
+                    color: var(--datetime-action-text-color);
 
                     &:hover {
-                        background-color: map.get($datetime, "action-hover-background-color");
+                        background-color: var(--datetime-action-hover-background-color);
                     }
                 }
 
@@ -70,7 +68,7 @@
                     cursor: pointer;
                     margin-right: 0.5em;
                     font-size: 2.5em;
-                    border-color: map.get($datetime, "action-text-color");
+                    border-color: var(--datetime-action-text-color);
                 }
             }
 
@@ -96,33 +94,33 @@
                     font-weight: 200;
 
                     &:hover {
-                        background-color: map.get($datetime, "action-hover-background-color");
+                        background-color: var(--datetime-action-hover-background-color);
                     }
 
                     &.disabled {
-                        color: map.get($datetime, "action-disabled-text-color");
+                        color: var(--datetime-action-disabled-text-color);
                     }
                 }
 
                 .year {
                     &.is-staging {
-                        background-color: map.get($datetime, "staging-year-background-color");
-                        color: map.get($datetime, "staging-year-text-color");
+                        background-color: var(--datetime-staging-year-background-color);
+                        color: var(--datetime-staging-year-text-color);
                     }
 
                     &.is-now {
-                        border-color: map.get($datetime, "current-year-border-color");
+                        border-color: var(--datetime-current-year-border-color);
                     }
                 }
 
                 .month {
                     &.is-staging {
-                        background-color: map.get($datetime, "staging-month-background-color");
-                        color: map.get($datetime, "staging-month-text-color");
+                        background-color: var(--datetime-staging-month-background-color);
+                        color: var(--datetime-staging-month-text-color);
                     }
 
                     &.is-now {
-                        border-color: map.get($datetime, "current-month-border-color");
+                        border-color: var(--datetime-current-month-border-color);
                     }
                 }
             }
@@ -141,7 +139,7 @@
                 // border-bottom: 1px solid lightgrey;
                 user-select: none;
                 font-weight: 700;
-                color: map.get($datetime, "weekday-name-color");
+                color: var(--datetime-weekday-name-color);
             }
 
             .week {
@@ -180,45 +178,43 @@
                     border: 0.125em solid transparent;
                     border-radius: 10em;
                     margin: 0.25em;
-
                 }
 
                 &.is-now {
                     .text {
-                        border-color: map.get($datetime, "current-day-border-color");
+                        border-color: var(--datetime-current-day-border-color);
                     }
                 }
 
                 &.not-in-month {
-                    color: map.get($datetime, "day-from-different-month-text-color");
+                    color: var(--datetime-day-from-different-month-text-color);
                 }
 
                 &.is-staging {
                     .text {
-                        background-color: map.get($datetime, "staging-day-background-color");
-                        color: map.get($datetime, "staging-day-text-color");
+                        background-color: var(--datetime-staging-day-background-color);
+                        color: var(--datetime-staging-day-text-color);
                     }
                 }
 
                 &.disabled {
                     .text {
-                        color: map.get($datetime, "disabled-day-text-color");
+                        color: var(--datetime-disabled-day-text-color);
                     }
                 }
 
                 &:hover {
                     .text {
-                        color: map.get($datetime, "day-hover-text-color");
-                        background-color: map.get($datetime, "day-hover-background-color");
+                        color: var(--datetime-day-hover-text-color);
+                        background-color: var(--datetime-day-hover-background-color);
                     }
 
                     &.disabled {
                         .text {
-                            background-color: map.get($datetime, "disabled-day-hover-background-color");
+                            background-color: var(--datetime-disabled-day-hover-background-color);
                         }
                     }
                 }
-
             }
         }
 
@@ -265,7 +261,6 @@
                 justify-content: center;
                 align-items: center;
             }
-
         }
     }
 }

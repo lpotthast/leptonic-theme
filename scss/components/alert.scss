@@ -1,36 +1,34 @@
 @use "sass:map";
 
 @mixin produce($config) {
-  $alert: map.get($config, "component", "alert");
-
   leptonic-alert {
     display: flex;
     flex-direction: row;
     align-items: center;
     line-height: inherit;
-    margin: map.get($alert, "margin");
-    padding: map.get($alert, "padding");
+    margin: var(--alert-margin);
+    padding: var(--alert-padding);
     border: none;
     border-radius: 0.5em;
 
     &[variant="info"] {
-      color: map.get($alert, "info-color");
-      background-color: map.get($alert, "info-background-color");
+      color: var(--alert-info-color);
+      background-color: var(--alert-info-background-color);
     }
 
     &[variant="success"] {
-      color: map.get($alert, "success-color");
-      background-color: map.get($alert, "success-background-color");
+      color: var(--alert-success-color);
+      background-color: var(--alert-success-background-color);
     }
 
     &[variant="warn"] {
-      color: map.get($alert, "warn-color");
-      background-color: map.get($alert, "warn-background-color");
+      color: var(--alert-warn-color);
+      background-color: var(--alert-warn-background-color);
     }
 
     &[variant="danger"] {
-      color: map.get($alert, "danger-color");
-      background-color: map.get($alert, "danger-background-color");
+      color: var(--alert-danger-color);
+      background-color: var(--alert-danger-background-color);
     }
 
     // TODO: Alerts are not dismissible. Toasts are!
