@@ -23,13 +23,8 @@ pub fn generate(path: PathBuf) {
 
     file.write_all(
         r#"
-        [data-theme="light"] {
-            @import "./themes/light/light";
-        }
-
-        [data-theme="dark"] {
-            @import "./themes/dark/dark";
-        }
+        @import "./themes/light";
+        @import "./themes/dark";
         "#
         .as_bytes(),
     )

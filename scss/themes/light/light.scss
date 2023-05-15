@@ -1,4 +1,0 @@
-@use "../builder" as builder;
-@use "light-config" as lightConfig;
-
-@include builder.build-theme(lightConfig.$config);

@@ -1,4 +1,0 @@
-@use "../builder" as builder;
-@use "dark-config" as darkConfig;
-
-@include builder.build-theme(darkConfig.$config);

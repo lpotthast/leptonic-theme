@@ -1,5 +1,6 @@
 @use "sass:map";
 
+// TODO: Allow different out-of-the-box color styles.
 @mixin produce($config) {
     $nob-width: 1.75em;
     $nob-transition: 0.3s;
@@ -49,11 +50,11 @@
             }
 
             .slider.on {
-                background-color: #2196f3;
+                background-color: var(--brand-color);
             }
 
             .slider:focus {
-                box-shadow: 0 0 0.1em #2196f3;
+                box-shadow: 0 0 0.1em var(--brand-color);
             }
 
             .slider.on {
