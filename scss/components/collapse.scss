@@ -1,24 +1,19 @@
-@use "sass:map";
+.leptonic-collapse {
+  overflow: hidden;
 
-@mixin produce($config) {
+  &.width {
+    transition: width 0.3s cubic-bezier(0.42, 0, 0.58, 1);
+  }
 
-  .leptonic-collapse {
-    overflow: hidden;
+  &.height {
+    transition: height 0.3s cubic-bezier(0.42, 0, 0.58, 1);
+  }
 
-    &.width {
-        transition: width 0.3s cubic-bezier(0.42, 0, 0.58, 1);
-    }
+  .content {
+    visibility: hidden;
 
-    &.height {
-        transition: height 0.3s cubic-bezier(0.42, 0, 0.58, 1);
-    }
-
-    .content {
-        visibility: hidden;
-
-        &.show {
-            visibility: visible;
-        }
+    &.show {
+      visibility: visible;
     }
   }
 }

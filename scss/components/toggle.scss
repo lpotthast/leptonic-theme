@@ -1,75 +1,73 @@
-@use "sass:map";
-
 // TODO: Allow different out-of-the-box color styles.
-@mixin produce($config) {
-    $nob-width: 1.75em;
-    $nob-transition: 0.3s;
 
-    .leptonic-toggle-wrapper {
+$nob-width: 1.75em;
+$nob-transition: 0.3s;
+
+.leptonic-toggle-wrapper {
+    display: inline-flex;
+    flex-direction: row;
+    user-select: none;
+
+    leptonic-icon {
+        margin: 0;
+        font-size: 1.2em;
+        color: #303030;
+    }
+
+    .leptonic-toggle {
         display: inline-flex;
-        flex-direction: row;
-        user-select: none;
+        width: 3.5em;
+        height: $nob-width;
 
-        leptonic-icon {
-            margin: 0;
-            font-size: 1.2em;
-            color: #303030;
-        }
-
-        .leptonic-toggle {
+        .slider {
+            cursor: pointer;
             display: inline-flex;
-            width: 3.5em;
-            height: $nob-width;
+            align-items: center;
+            cursor: pointer;
+            width: 100%;
+            height: 100%;
+            background-color: #ccc;
+            transition: $nob-transition;
 
-            .slider {
-                cursor: pointer;
+            .icon-positioner {
+                position: absolute;
                 display: inline-flex;
                 align-items: center;
-                cursor: pointer;
-                width: 100%;
-                height: 100%;
-                background-color: #ccc;
-                transition: $nob-transition;
-
-                .icon-positioner {
-                    position: absolute;
-                    display: inline-flex;
-                    align-items: center;
-                    justify-content: center;
-                    width: $nob-width;
-                    transition: $nob-transition;
-                }
-            }
-
-            .slider:before {
-                content: "";
-                height: 100%;
+                justify-content: center;
                 width: $nob-width;
-                background-color: #fff;
                 transition: $nob-transition;
             }
+        }
 
-            .slider.on {
-                background-color: var(--brand-color);
-            }
+        .slider:before {
+            content: "";
+            height: 100%;
+            width: $nob-width;
+            background-color: #fff;
+            transition: $nob-transition;
+        }
 
-            .slider:focus {
-                box-shadow: 0 0 0.1em var(--brand-color);
-            }
+        .slider.on {
+            background-color: var(--brand-color);
+        }
 
-            .slider.on {
-                &:before, .icon-positioner {
-                    transform: translateX(1.75em);
-                }
-            }
+        .slider:focus {
+            box-shadow: 0 0 0.1em var(--brand-color);
+        }
 
-            .slider.round {
-                border-radius: 2em;
+        .slider.on {
+            &:before,
+            .icon-positioner {
+                transform: translateX(1.75em);
             }
+        }
 
-            .slider.round:before {
-                border-radius: 50%;
-            }
+        .slider.round {
+            border-radius: 2em;
+        }
+
+        .slider.round:before {
+            border-radius: 50%;
         }
     }
 }

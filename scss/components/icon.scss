@@ -1,11 +1,7 @@
-@use "sass:map";
+leptonic-icon {
+    --margin: 0;
 
-@mixin produce($config) {
-    leptonic-icon {
-        --margin: 0;
-
-        display: inline-flex;
-        user-select: none;
-        margin: var(--margin);
-    }
+    display: inline-flex;
+    user-select: none;
+    margin: var(--margin);
 }

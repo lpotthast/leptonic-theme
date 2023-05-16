@@ -1,14 +1,10 @@
-@use "sass:map";
+leptonic-checkbox {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 
-@mixin produce($config) {
-    leptonic-checkbox {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-
-        input[type="checkbox"] {
-            width: 1em;
-            height: 1em;
-        }
+    input[type="checkbox"] {
+        width: 1em;
+        height: 1em;
     }
 }

@@ -1,11 +1,7 @@
-@use "sass:map";
-
-@mixin produce($config) {
-  .leptonic-field-label {
-    display: inline-flex;
-    color: var(--field-label-color);
-    font-size: 0.9em;
-    cursor: pointer;
-    user-select: none;
-  }
+.leptonic-field-label {
+  display: inline-flex;
+  color: var(--field-label-color);
+  font-size: 0.9em;
+  cursor: pointer;
+  user-select: none;
 }

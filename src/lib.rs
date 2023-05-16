@@ -23,6 +23,7 @@ pub fn generate(path: PathBuf) {
 
     file.write_all(
         r#"
+        @import "./themes/builder";
         @import "./themes/light";
         @import "./themes/dark";
         "#

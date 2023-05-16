@@ -1,5 +1,3 @@
-@use "sass:map";
-
 @mixin input-field() {
   display: flex;
   position: relative;
@@ -29,39 +27,37 @@
   }
 }
 
-@mixin produce($config) {
-  [data-input] {
-    position: relative;
-    z-index: 2;
-    line-height: inherit;
-  }
+[data-input] {
+  position: relative;
+  z-index: 2;
+  line-height: inherit;
+}
 
-  .leptonic-input {
-    @include input-field();
-  }
+.leptonic-input {
+  @include input-field();
+}
 
-  textarea.leptonic-input {
-    height: auto;
-    max-height: 25em;
-  }
+textarea.leptonic-input {
+  height: auto;
+  max-height: 25em;
+}
 
-  .leptonic-limit {
-    position: relative;
-    float: right;
-    right: 0.5em;
-    top: -2.3em;
-    margin-bottom: -1000px;
-    color: darkgrey;
-    z-index: 3;
-    font-size: 0.9em;
-  }
+.leptonic-limit {
+  position: relative;
+  float: right;
+  right: 0.5em;
+  top: -2.3em;
+  margin-bottom: -1000px;
+  color: darkgrey;
+  z-index: 3;
+  font-size: 0.9em;
+}
 
-  .leptonic-form-group {
-    margin-bottom: 1em;
-  }
+.leptonic-form-group {
+  margin-bottom: 1em;
+}
 
-  .leptonic-form-label {
-    padding: 0.4em 0;
-    margin-bottom: 0;
-  }
+.leptonic-form-label {
+  padding: 0.4em 0;
+  margin-bottom: 0;
 }
