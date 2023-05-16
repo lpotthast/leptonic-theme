@@ -1,36 +1,35 @@
 @use "sass:map";
 
-@mixin input-field($input) {
+@mixin input-field() {
   display: flex;
   position: relative;
   z-index: 2;
 
   width: 100%;
 
-  padding: map.get($input, "padding");
+  padding: var(--input-padding);
   margin: 0;
 
-  color: map.get($input, "color");
-  background-color: map.get($input, "background-color");
+  color: var(--input-color);
+  background-color: var(--input-background-color);
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
-  border: map.get($input, "border");
-  border-bottom: map.get($input, "border-bottom");
-  border-radius: map.get($input, "border-radius");
+  border: var(--input-border);
+  border-bottom: var(--input-border-bottom);
+  border-radius: var(--input-border-radius);
 
-  -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
-  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
-  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -webkit-transition: border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
+  -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 
-  &, &:focus, &:active {
+  &,
+  &:focus,
+  &:active {
     outline: none;
   }
 }
 
 @mixin produce($config) {
-
-  $input: map.get($config, "component", "input");
-
   [data-input] {
     position: relative;
     z-index: 2;
@@ -38,7 +37,7 @@
   }
 
   .leptonic-input {
-    @include input-field($input);
+    @include input-field();
   }
 
   textarea.leptonic-input {
@@ -49,12 +48,12 @@
   .leptonic-limit {
     position: relative;
     float: right;
-    right: .5em;
+    right: 0.5em;
     top: -2.3em;
     margin-bottom: -1000px;
     color: darkgrey;
     z-index: 3;
-    font-size: .9em;
+    font-size: 0.9em;
   }
 
   .leptonic-form-group {
@@ -62,8 +61,7 @@
   }
 
   .leptonic-form-label {
-    padding: .4em 0;
+    padding: 0.4em 0;
     margin-bottom: 0;
   }
-
 }
