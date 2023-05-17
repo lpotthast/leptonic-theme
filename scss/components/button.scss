@@ -4,6 +4,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  padding: 0;
   border: 0.1em solid transparent;
   font-size: 1em;
   font-weight: 400;
@@ -198,6 +199,7 @@
     justify-content: center;
     align-items: center;
     padding: 0.5em 0.75em;
+    line-height: 1em;
   }
 
   .dropdown-trigger {
