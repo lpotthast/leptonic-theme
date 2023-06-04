@@ -49,6 +49,7 @@
 
     &:hover,
     &:active,
+    &.active,
     &:focus {
       color: var(--button-primary-text-color-hover);
       background-color: var(--button-primary-background-color-hover);
@@ -70,6 +71,7 @@
 
     &:hover,
     &:active,
+    &.active,
     &:focus {
       color: var(--button-secondary-text-color-hover);
       background-color: var(--button-secondary-background-color-hover);
@@ -91,6 +93,7 @@
 
     &:hover,
     &:active,
+    &.active,
     &:focus {
       color: var(--button-success-text-color-hover);
       background-color: var(--button-success-background-color-hover);
@@ -112,6 +115,7 @@
 
     &:hover,
     &:active,
+    &.active,
     &:focus {
       color: var(--button-info-text-color-hover);
       background-color: var(--button-info-background-color-hover);
@@ -133,6 +137,7 @@
 
     &:hover,
     &:active,
+    &.active,
     &:focus {
       color: var(--button-warning-text-color-hover);
       background-color: var(--button-warning-background-color-hover);
@@ -154,12 +159,15 @@
 
     &:hover,
     &:active,
+    &.active,
     &:focus {
       color: var(--button-danger-text-color-hover);
       background-color: var(--button-danger-background-color-hover);
       border-color: var(--button-danger-border-color-hover);
     }
 
+    // We purposefully only render the box-shadow when the "real" active property is set,
+    // and not as well when the button was programmatically set to be active.
     &:active {
       &::before {
         box-shadow: 0 0 0 0.2em var(--button-danger-box-shadow-color);
