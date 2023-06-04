@@ -11,13 +11,19 @@ $nob-transition: 0.3s;
     leptonic-icon {
         margin: 0;
         font-size: 1.2em;
-        color: #303030;
+        color: var(--toggle-icon-color);
     }
 
     .leptonic-toggle {
         display: inline-flex;
-        width: 3.5em;
         height: $nob-width;
+
+        &[variant="sliding"] {
+            width: 3.5em;
+        }
+        &[variant="stationary"] {
+            width: $nob-width;
+        }
 
         .slider {
             cursor: pointer;
@@ -26,7 +32,7 @@ $nob-transition: 0.3s;
             cursor: pointer;
             width: 100%;
             height: 100%;
-            background-color: #ccc;
+            background-color: var(--toggle-slider-off-background-color);
             transition: $nob-transition;
 
             .icon-positioner {
@@ -43,22 +49,24 @@ $nob-transition: 0.3s;
             content: "";
             height: 100%;
             width: $nob-width;
-            background-color: #fff;
+            background-color: var(--toggle-knob-background-color);
             transition: $nob-transition;
         }
 
         .slider.on {
-            background-color: var(--brand-color);
+            background-color: var(--toggle-slider-on-background-color);
         }
 
         .slider:focus {
             box-shadow: 0 0 0.1em var(--brand-color);
         }
 
-        .slider.on {
-            &:before,
-            .icon-positioner {
-                transform: translateX(1.75em);
+        &[variant="sliding"] {
+            .slider.on {
+                &:before,
+                .icon-positioner {
+                    transform: translateX(1.75em);
+                }
             }
         }
 

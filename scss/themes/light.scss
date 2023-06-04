@@ -254,6 +254,12 @@
     --tiptap-editor-instance-background-color: var(--input-bg-color);
     --tiptap-editor-border-color: #c9c9c9;
 
+    // Toggle
+    --toggle-slider-off-background-color: #ccc;
+    --toggle-slider-on-background-color: var(--brand-color);
+    --toggle-knob-background-color: white;
+    --toggle-icon-color: #303030;
+
     // Typography
     --typography-font-family: var(--font-family); // TODO: Inline?
     --typography-code-background-color: #2d2f34;
