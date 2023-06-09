@@ -28,6 +28,23 @@ leptonic-select {
             outline: none;
             border-bottom: var(--select-focus-highlight-background-color);
         }
+
+        leptonic-select-deselect-trigger {
+            position: absolute;
+            right: 1em;
+            color: lightgray;
+        }
+    }
+
+    &[variant="multiselect"] {
+        leptonic-select-selected {
+            leptonic-select-option {
+                background-color: #454545;
+                padding: 0.3em;
+                border-radius: 0.4em;
+                margin-right: 0.5em;
+            }
+        }
     }
 
     leptonic-select-options {
