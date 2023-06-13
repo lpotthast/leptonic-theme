@@ -55,7 +55,7 @@ leptonic-tiptap-editor {
             cursor: grab;
         }
 
-        &[aria-disabled="true"] {
+        &[aria-disabled] {
             cursor: not-allowed;
             color: var(--tiptap-editor-instance-disabled-color);
         }
