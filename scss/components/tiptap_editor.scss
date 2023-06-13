@@ -1,13 +1,8 @@
-.tiptap-editor {
+leptonic-tiptap-editor {
     display: flex;
     flex-direction: column;
 
-    // Reset
-    .ProseMirror:focus {
-        outline: none;
-    }
-
-    .tiptap-menu {
+    leptonic-tiptap-menu {
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
@@ -15,28 +10,34 @@
         border: 1px solid var(--tiptap-editor-border-color);
         gap: 0.3em;
         padding: 1em;
-    }
 
-    .tiptap-btn {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        font-weight: 300;
-        color: var(--tiptap-editor-btn-color);
-        background-color: var(--tiptap-editor-btn-background-color);
-        border-radius: 0.25em;
-        padding: 0.25em;
-        user-select: none;
-        cursor: pointer;
+        .leptonic-tiptap-btn {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            font-weight: 300;
+            color: var(--tiptap-editor-btn-color);
+            background-color: var(--tiptap-editor-btn-background-color);
+            border-radius: 0.25em;
+            padding: 0.25em;
+            user-select: none;
+            cursor: pointer;
 
-        &.active,
-        &:hover {
-            color: var(--tiptap-editor-active-btn-color);
-            background-color: var(--tiptap-editor-active-btn-background-color);
+            &.active,
+            &:hover {
+                color: var(--tiptap-editor-active-btn-color);
+                background-color: var(--tiptap-editor-active-btn-background-color);
+            }
         }
     }
 
-    .tiptap-instance {
+    leptos-tiptap-instance {
+
+        // Reset
+        .ProseMirror:focus {
+            outline: none;
+        }
+
         border: 1px solid var(--tiptap-editor-border-color);
         color: var(--tiptap-editor-instance-color);
         background-color: var(--tiptap-editor-instance-background-color);
@@ -50,18 +51,18 @@
             // Image can be moved!
             cursor: grab;
         }
-    }
 
-    &.disabled {
-        cursor: not-allowed;
+        &.disabled {
+            cursor: not-allowed;
 
-        .tiptap-menu {
-            display: none;
-        }
+            .tiptap-menu {
+                display: none;
+            }
 
-        .tiptap-instance {
-            color: grey;
-            pointer-events: none;
+            .tiptap-instance {
+                color: grey;
+                pointer-events: none;
+            }
         }
     }
 }
