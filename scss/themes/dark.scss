@@ -247,11 +247,11 @@
 
     // Tiptap editor
     --tiptap-editor-btn-color: var(--std-text-bright);
-    --tiptap-editor-btn-background-color: var(--input-bg-color);
+    --tiptap-editor-btn-background-color: #404040;
     --tiptap-editor-active-btn-color: var(--std-text-dark);
-    --tiptap-editor-active-btn-background-color: var(--input-inverted-bg-color);
+    --tiptap-editor-active-btn-background-color: #d6d6d6;
     --tiptap-editor-instance-color: var(--std-text-bright);
-    --tiptap-editor-instance-background-color: var(--input-bg-color);
+    --tiptap-editor-instance-background-color: transparent;
     --tiptap-editor-border-color: var(--grey-4);
 
     // Toggle

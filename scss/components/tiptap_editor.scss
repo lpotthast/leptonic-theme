@@ -8,16 +8,18 @@ leptonic-tiptap-editor {
         justify-content: flex-start;
         flex-wrap: wrap;
         border: 1px solid var(--tiptap-editor-border-color);
+        border-bottom: none;
         gap: 0.3em;
         padding: 1em;
 
-        .leptonic-tiptap-btn {
+        .leptonic-btn.leptonic-tiptap-btn {
             display: flex;
             justify-content: flex-start;
             align-items: center;
             font-weight: 300;
             color: var(--tiptap-editor-btn-color);
             background-color: var(--tiptap-editor-btn-background-color);
+            border-color: transparent;
             border-radius: 0.25em;
             padding: 0.25em;
             user-select: none;
@@ -27,6 +29,7 @@ leptonic-tiptap-editor {
             &:hover {
                 color: var(--tiptap-editor-active-btn-color);
                 background-color: var(--tiptap-editor-active-btn-background-color);
+                border-color: transparent;
             }
         }
     }
