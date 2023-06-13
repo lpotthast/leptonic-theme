@@ -55,17 +55,9 @@ leptonic-tiptap-editor {
             cursor: grab;
         }
 
-        &.disabled {
+        &[aria-disabled="true"] {
             cursor: not-allowed;
-
-            .tiptap-menu {
-                display: none;
-            }
-
-            .tiptap-instance {
-                color: grey;
-                pointer-events: none;
-            }
+            color: var(--tiptap-editor-instance-disabled-color);
         }
     }
 }
