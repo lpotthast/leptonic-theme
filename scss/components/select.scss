@@ -31,18 +31,44 @@ leptonic-select {
 
         leptonic-select-deselect-trigger {
             position: absolute;
-            right: 1em;
-            color: lightgray;
+            right: 2.2em;
+            color: #878787;
+            background-color: #353535;
+            border-radius: 1em;
+            font-size: 1.2em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &:hover {
+                color: var(--input-color);
+            }
+        }
+
+        leptonic-select-show-trigger {
+            position: absolute;
+            right: 0.75em;
+            margin-top: 0.1em;
+            color: #bfbfbf;
+            border-radius: 1em;
+            font-size: 1.1em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &:hover {
+                color: var(--input-color);
+            }
         }
     }
 
     &[variant="multiselect"] {
         leptonic-select-selected {
             leptonic-select-option {
-                background-color: #454545;
-                padding: 0.3em;
-                border-radius: 0.4em;
-                margin-right: 0.5em;
+                leptonic-chip {
+                    margin: 0.1em 0.4em 0.1em 0;
+                    border-radius: 0.8em;
+                }
             }
         }
     }
@@ -57,7 +83,7 @@ leptonic-select {
         box-shadow: var(--select-dropdown-shadow); // 6px 8px 20px -7px #0d0d0d
         border: none; //0.1em solid #242424;
         border-top: none;
-        max-height: 8em;
+        max-height: 12em;
         overflow-y: scroll;
         z-index: 999;
 
@@ -71,6 +97,10 @@ leptonic-select {
 
             &:hover {
                 background-color: var(--select-item-hover-background-color);
+            }
+
+            &.preselected {
+                background-color: var(--select-item-preselected-background-color);
             }
         }
     }

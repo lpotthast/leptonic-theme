@@ -55,4 +55,10 @@ leptonic-chip {
             background-color: var(--chip-danger-background-color-hover);
         }
     }
+
+    leptonic-icon.dismiss {
+        margin-left: 0.4em;
+        font-size: 1.1em;
+        cursor: pointer;
+    }
 }

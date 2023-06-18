@@ -26,6 +26,7 @@ $nob-transition: 0.3s;
         }
 
         .slider {
+            position: relative;
             cursor: pointer;
             display: inline-flex;
             align-items: center;

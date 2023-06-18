@@ -3,16 +3,17 @@ leptonic-collapsible {
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 
     leptonic-collapsible-header-wrapper {
         width: 100%;
-        background-color: antiquewhite;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        padding: 0.75em;
-        background-color: grey;
+        padding: var(--collapsible-header-padding);
+        color: var(--collapsible-header-color);
+        background-color: var(--collapsible-header-background-color);
         cursor: pointer;
         user-select: none;
 
@@ -26,10 +27,11 @@ leptonic-collapsible {
 
     leptonic-collapsible-body {
         width: 100%;
-        display: none; // Expected to be flex when not none.
+        display: none;
         justify-content: flex-start;
-        padding: 0.75em;
-        background-color: lightgrey;
+        padding: var(--collapsible-body-padding);
+        color: var(--collapsible-body-color);
+        background-color: var(--collapsible-body-background-color);
 
         &.show {
             display: flex;

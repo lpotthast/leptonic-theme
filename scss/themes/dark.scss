@@ -138,6 +138,14 @@
     --chip-danger-background-color: var(--danger-color);
     --chip-danger-background-color-hover: color-mix(in srgb, black var(--darker-2), var(--danger-color));
 
+    // Collapsibles
+    --collapsible-header-color: var(--std-text-bright);
+    --collapsible-header-background-color: #262626;
+    --collapsible-header-padding: 0.75em;
+    --collapsible-body-color: var(--std-text-bright);
+    --collapsible-body-background-color: #353535;
+    --collapsible-body-padding: 0.75em;
+
     // Datetime
     --datetime-font-size: 1em;
     --datetime-weekday-name-color: var(--primary-color);
@@ -213,6 +221,7 @@
     --select-item-color: var(--std-text-bright);
     --select-item-background-color: var(--input-background-color);
     --select-item-padding: var(--input-padding);
+    --select-item-preselected-background-color: rgb(56, 121, 192);
     --select-item-hover-background-color: color-mix(in srgb, white 20%, var(--input-background-color));
     --select-item-selected-background-color: color-mix(in srgb, white 30%, var(--input-background-color));
 
