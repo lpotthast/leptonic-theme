@@ -221,6 +221,8 @@
     --select-item-color: var(--std-text-bright);
     --select-item-background-color: var(--input-background-color);
     --select-item-padding: var(--input-padding);
+    --select-item-disabled-background-color: #5b5b5b;
+    --select-item-disabled-color: var(--std-text-bright);
     --select-item-preselected-background-color: rgb(56, 121, 192);
     --select-item-hover-background-color: color-mix(in srgb, white 20%, var(--input-background-color));
     --select-item-selected-background-color: color-mix(in srgb, white 30%, var(--input-background-color));

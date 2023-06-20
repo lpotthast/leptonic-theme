@@ -91,12 +91,17 @@ leptonic-select {
             display: flex;
         }
 
-        .option {
+        leptonic-select-option {
             padding: 0.5em;
             user-select: none;
 
             &:hover {
                 background-color: var(--select-item-hover-background-color);
+            }
+
+            &.disabled {
+                color: var(--select-item-disabled-color);
+                background-color: var(--select-item-disabled-background-color);
             }
 
             &.preselected {
