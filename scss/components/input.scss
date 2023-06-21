@@ -27,6 +27,10 @@
   }
 }
 
+leptonic-input-field {
+  display: flex;
+}
+
 [data-input] {
   position: relative;
   z-index: 2;
