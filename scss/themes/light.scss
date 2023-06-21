@@ -200,6 +200,14 @@
     --modal-border-radius: 0.4em;
     --modal-box-shadow: 10px 10px 22px -10px rgba(0, 0, 0, 0.55);
 
+    // Progress bar
+    --progress-bar-height: 1.5em;
+    --progress-bar-border-radius: 0.15em;
+    --progress-bar-background-color: #d9d9d9;
+    --progress-bar-background-color-transparent: #d9d9d96e;
+    --progress-bar-background-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15) inset;
+    --progress-bar-color: var(--std-text-dark);
+
     // Select
     --select-padding: var(--input-padding);
     --select-min-height: var(--input-min-height);

@@ -58,7 +58,7 @@ leptonic-alert {
 
   .prepend {
     margin-right: 0.7em;
-    margin-top: 0.1em;
+    display: flex;
     align-self: flex-start;
 
     leptonic-icon {
