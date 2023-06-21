@@ -9,9 +9,35 @@ leptonic-progress-bar {
     background-color: transparent;
     user-select: none;
 
+    &[indeterminate] {
+        leptonic-progress-bar-background {
+            leptonic-progress-bar-fill {
+                -webkit-animation: animate-move 1.3s cubic-bezier(0.29, 0.63, 0.81, 0.07) infinite;
+                animation: animate-move 1.3s cubic-bezier(0.29, 0.63, 0.81, 0.07) infinite;
+
+                @-webkit-keyframes animate-move {
+                    100% {
+                        left: 100%;
+                    }
+                }
+                @keyframes animate-move {
+                    100% {
+                        left: 100%;
+                    }
+                }
+
+                leptonic-progress-bar-fill-overlay {
+                    background: none;
+                    animation: none;
+                }
+            }
+        }
+    }
+
     leptonic-progress-bar-background {
         display: inline-flex;
         position: relative;
+        overflow: hidden;
         justify-content: center;
         align-items: center;
         background-color: var(--progress-bar-background-color);
@@ -31,34 +57,32 @@ leptonic-progress-bar {
 
             height: 100%;
             border-radius: var(--progress-bar-border-radius);
-        }
 
-        leptonic-progress-bar-fill-overlay {
-            display: inline-flex;
-            position: absolute;
-            left: 0;
-            top: 0;
-            background-image: -webkit-linear-gradient(
-                -45deg,
-                transparent 33%,
-                rgba(0, 0, 0, 0.1) 33%,
-                rgba(0, 0, 0, 0.1) 66%,
-                transparent 66%
-            );
-            height: 100%;
-            border-radius: var(--progress-bar-border-radius);
-            background-size: calc(var(--progress-bar-height) * 2), 1em, 100% 100%, 100% 100%;
-            -webkit-animation: animate-stripes 1s linear infinite;
-            animation: animate-stripes 1s linear infinite;
+            leptonic-progress-bar-fill-overlay {
+                display: inline-flex;
+                width: 100%;
+                background-image: -webkit-linear-gradient(
+                    -45deg,
+                    transparent 33%,
+                    rgba(0, 0, 0, 0.1) 33%,
+                    rgba(0, 0, 0, 0.1) 66%,
+                    transparent 66%
+                );
+                height: 100%;
+                border-radius: var(--progress-bar-border-radius);
+                background-size: calc(var(--progress-bar-height) * 2), 1em, 100% 100%, 100% 100%;
+                -webkit-animation: animate-stripes 1s linear infinite;
+                animation: animate-stripes 1s linear infinite;
 
-            @-webkit-keyframes animate-stripes {
-                100% {
-                    background-position: -54px 0px;
+                @-webkit-keyframes animate-stripes {
+                    100% {
+                        background-position: -54px 0px;
+                    }
                 }
-            }
-            @keyframes animate-stripes {
-                100% {
-                    background-position: -54px 0px;
+                @keyframes animate-stripes {
+                    100% {
+                        background-position: -54px 0px;
+                    }
                 }
             }
         }
