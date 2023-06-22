@@ -1,3 +1,3 @@
 # leptonic-theme
 
-Provides the general SCSS code for frontend implementations.
+Provides general styling as well as theming to applications using `leptos` with the `leptonic` components.
