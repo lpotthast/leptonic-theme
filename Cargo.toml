@@ -6,12 +6,12 @@ rust-version = "1.56"
 authors = ["Lukas Potthast <privat@lukas-potthast.de>"]
 license = "MIT OR Apache-2.0"
 readme = "README.md"
-repository = "https://github.com/lpotthast/leptonic"
+repository = "https://github.com/lpotthast/leptonic-theme"
 description = """
-Theme builder for the Leptos component library.
+Theme builder for the Leptonic component library.
 """
 categories = ["gui"]
-keywords = ["leptos", "components", "theme"]
+keywords = ["leptos", "leptonic", "components", "component-library", "theme", "theming", "css"]
 
 [dependencies]
 include_dir = "0.7"
