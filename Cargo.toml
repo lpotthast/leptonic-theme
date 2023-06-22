@@ -11,7 +11,7 @@ description = """
 Theme builder for the Leptonic component library.
 """
 categories = ["gui"]
-keywords = ["leptos", "leptonic", "components", "component-library", "theme", "theming", "css"]
+keywords = ["leptos", "components", "component-library", "theming", "css"]
 
 [dependencies]
 include_dir = "0.7"
